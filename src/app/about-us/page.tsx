@@ -14,7 +14,7 @@ export default function AboutPage() {
     <div className="bg-white text-gray-900">
       <AboutHero />
       <OurStory />
-      <TeamValues />
+      {/* <TeamValues /> */}
       <JoinUsCTA />
     </div>
   );

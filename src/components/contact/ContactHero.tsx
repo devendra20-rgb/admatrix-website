@@ -1,53 +1,44 @@
 "use client";
+
 import React from "react";
 import { motion } from "framer-motion";
 
 export default function ContactHero() {
   return (
-    <section className="relative w-full bg-black overflow-hidden flex flex-col justify-center items-center text-center py-32 px-6 md:px-20 lg:px-32 ">
-      {/* 🔥 THEME GLOW EFFECTS */}
+    <section className="relative w-full bg-white overflow-hidden flex flex-col justify-center items-center text-center py-28 md:py-36 px-6">
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute inset-0 bg-gradient-to-br from-black via-[#6900CC]/10 to-black" />
-        <div className="absolute top-1/4 right-1/4 w-[600px] h-[600px] bg-[#6900CC]/20 rounded-full blur-[130px] animate-pulse" />
-        <div className="absolute bottom-1/4 left-1/4 w-[500px] h-[500px] bg-[#39B14A]/15 rounded-full blur-[110px] animate-pulse delay-700" />
+        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-orange-500/10 rounded-full blur-[150px]" />
+        <div className="absolute bottom-0 left-0 w-[700px] h-[700px] bg-violet-500/10 rounded-full blur-[140px]" />
       </div>
 
-      <div className="relative z-10 text-center max-w-6xl mx-auto">
-        {/* Label */}
+      <div className="relative z-10 text-center max-w-5xl mx-auto">
         <motion.p 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="text-[#39B14A] uppercase tracking-[0.5em] text-xs md:text-sm font-black mb-6"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          className="text-orange-600 uppercase tracking-[0.45em] text-sm font-bold mb-6"
         >
-          Contact Us
+          START A PROJECT
         </motion.p>
 
-        {/* Headline - Purple to Green Gradient */}
         <motion.h1 
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          className="text-5xl md:text-9xl font-black text-white mb-8 leading-[1] uppercase tracking-tighter"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-[1.05] text-gray-900 mb-8"
         >
-          Let's Start <br />
-          <span className="bg-gradient-to-r from-[#6900CC] via-white to-[#39B14A] bg-clip-text text-transparent drop-shadow-[0_10px_20px_rgba(105,0,204,0.3)]">
-            the Conversation
+          Let’s build your next{" "}
+          <span className="bg-gradient-to-r from-orange-600 via-violet-600 to-purple-600 bg-clip-text text-transparent">
+            growth campaign
           </span>
         </motion.h1>
 
-        {/* Sub-text */}
         <motion.p 
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          whileInView={{ opacity: 1 }}
           transition={{ delay: 0.4 }}
-          className="text-lg md:text-2xl text-gray-400 max-w-4xl mx-auto leading-relaxed font-medium "
+          className="text-lg md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed"
         >
-          "Expertise is just a message away. Reach out to discuss your goals."
+          Tell us about your brand, goal, and target market. We will help you plan the right media approach for awareness, acquisition, leads, sales, or app growth.
         </motion.p>
-
-        {/* Decorative Down-Line */}
-        <div className="mt-16 flex flex-col items-center gap-4 opacity-40">
-           <div className="w-px h-24 bg-gradient-to-b from-[#6900CC] via-[#39B14A] to-transparent"></div>
-        </div>
       </div>
     </section>
   );

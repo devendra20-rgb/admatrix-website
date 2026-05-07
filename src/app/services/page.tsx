@@ -3,8 +3,9 @@ import ServicesHero from "@/components/services/ServicesHero";
 import BrandingPromotion from "@/components/services/BrandingPromotion";
 import EventActivation from "@/components/services/EventActivation";
 import OutdoorAds from "@/components/services/OutdoorAds";
-import ServiceCTA from "@/components/services/ServiceCTA";
+// import ServiceCTA from "@/components/services/ServiceCTA";
 import JoinUsCTA from "@/components/about/JoinUsCTA";
+import AllServices from "@/components/services/AllServices";
 
 export const metadata = {
   title: "Our Services | 5th Element Advertising & Tech",
@@ -15,9 +16,10 @@ export default function ServicesPage() {
   return (
     <div className="bg-white text-gray-900">
       <ServicesHero />
-      <BrandingPromotion />
+      <AllServices />
+      {/* <BrandingPromotion />
       <EventActivation />
-      <OutdoorAds />
+      <OutdoorAds /> */}
       <JoinUsCTA />
       {/* <ServiceCTA /> */}
     </div>

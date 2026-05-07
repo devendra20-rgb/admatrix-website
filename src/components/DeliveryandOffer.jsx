@@ -1,139 +1,144 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
+import { ArrowRight, Target, Lightbulb, Wrench, Rocket, TrendingUp, BarChart3 } from "lucide-react";
 
-const DeliveryAndOffer = () => {
-  const offerTabs = [
-    {
-      id: "discovery",
-      label: "Discovery",
-      // title: "Put your brand in front of the right audience",
-      desc: "Put your brand in front of the right audience, in the right environment. We build reach through a precision mix of digital media, outdoor placements, and high-impact launch moments so your brand shows up where it matters.",
-      bullets: ["Channel mix", "Audience targeting", "High-impact placements"],
-    },
-    {
-      id: "engagement",
-      label: "Engagement",
-      // title: "Turn attention into interest",
-      desc: "Turn awareness into intent. Through compelling creative, immersive activations, and smart retargeting, we give your audience reasons to lean in and stay in.",
-      bullets: [
-        "Creative campaigns",
-        "Experiential activations",
-        "Retargeting strategies",
-      ],
-    },
-    {
-      id: "conversion",
-      label: "Conversion",
-      // title: "Drive actions that matter",
-      desc: "Close the loop with performance. We track, optimise, and report on what's working then push harder on what drives real business outcomes.",
-      bullets: [
-        "Performance media",
-        "Conversion optimisation",
-        "Measurable ROI",
-      ],
-    },
-  ];
+const processSteps = [
+  {
+    number: "01",
+    title: "Understand",
+    desc: "We study your business, audience, market, competitors, objectives, and current media performance.",
+    icon: <Target className="w-6 h-6" />,
+  },
+  {
+    number: "02",
+    title: "Strategize",
+    desc: "We define the funnel, channel mix, targeting approach, campaign structure, KPIs, and budget allocation.",
+    icon: <Lightbulb className="w-6 h-6" />,
+  },
+  {
+    number: "03",
+    title: "Build",
+    desc: "We prepare the campaign setup, tracking, creative direction, ad copy, audience segments, and reporting framework.",
+    icon: <Wrench className="w-6 h-6" />,
+  },
+  {
+    number: "04",
+    title: "Launch",
+    desc: "We activate campaigns across selected platforms with proper QA checks and tracking validation.",
+    icon: <Rocket className="w-6 h-6" />,
+  },
+  {
+    number: "05",
+    title: "Optimize",
+    desc: "We review performance signals and improve budgets, bids, audiences, placements, creatives, and landing paths.",
+    icon: <TrendingUp className="w-6 h-6" />,
+  },
+  {
+    number: "06",
+    title: "Report",
+    desc: "We share clear insights, performance summaries, learnings, and recommendations for the next phase.",
+    icon: <BarChart3 className="w-6 h-6" />,
+  },
+];
 
-  const [activeOffer, setActiveOffer] = useState("discovery");
-
-  const currentTab = offerTabs.find((t) => t.id === activeOffer);
-
+export default function HowWeWork() {
   return (
-    <section className="relative bg-black text-white py-24 md:py-32 overflow-hidden">
-      {/* 🔥 Updated Background Glow: Purple to Green Mix */}
-      <div className="absolute inset-0 z-0 pointer-events-none">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(105,0,204,0.15)_0%,transparent_50%),radial-gradient(circle_at_80%_70%,rgba(57,177,74,0.15)_0%,transparent_60%)]" />
-        <div className="absolute inset-0 animate-pulse-slow bg-gradient-to-br from-[#6900CC]/5 via-transparent to-[#39B14A]/5" />
+    <section className="relative w-full bg-white pt-16 pb-24 md:pt-20 md:pb-32 overflow-hidden">
+      {/* Background Accents */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-10 right-10 w-80 h-80 bg-orange-500/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-10 left-10 w-80 h-80 bg-violet-500/5 rounded-full blur-3xl" />
       </div>
 
-      <div className="relative z-10 max-w-[1440px] mx-auto px-6 md:px-10 lg:px-12">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
-          <p className="text-sm font-semibold uppercase tracking-widest text-gray-400 mb-6">
-            How We Work
-          </p>
-          <h2 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 text-white">
-            A full-funnel{" "}
-            <span className="bg-gradient-to-r from-[#6900CC] to-[#39B14A] bg-clip-text text-transparent">
-              approach built for
-            </span>
-            <br />
-            the way people buy in MENA.
-          </h2>
-          <p className="text-lg md:text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Most agencies hand off between disciplines. We don't. Our digital,
-            activation, and OOH capabilities are designed to feed each other
-            building awareness, sparking interest, and driving measurable
-            conversions in a single connected loop.
-          </p>
-        </motion.div>
-
-        <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start lg:items-stretch">
-          <div className="w-full lg:w-1/3 flex flex-wrap lg:flex-col gap-4 justify-center lg:justify-start">
-            {offerTabs.map((tab) => (
-              <button
-                key={tab.id}
-                onClick={() => setActiveOffer(tab.id)}
-                className={`
-                  rounded-full px-8 py-4 text-base font-semibold transition-all duration-300
-                  ${
-                    activeOffer === tab.id
-                      ? "bg-[#39b14a] text-white shadow-xl shadow-green-900/40 scale-105"
-                      : "bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white hover:scale-102"
-                  }
-                `}
-              >
-                {tab.label}
-              </button>
-            ))}
-          </div>
-
-          <motion.div
-            key={activeOffer}
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            className="w-full lg:w-2/3 bg-gray-900/40 rounded-3xl p-8 lg:p-12 backdrop-blur-md border border-gray-800/50 min-h-[500px] flex flex-col"
+      <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-12 relative z-10">
+        {/* Header - More Compact */}
+        <div className="text-center mb-12 md:mb-16">
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-orange-600 uppercase tracking-[0.25em] text-sm font-bold mb-3"
           >
-            {/* 🔥 Updated Visual Placeholder Gradient: Purple to Green */}
-            <div className="flex-1 relative rounded-2xl overflow-hidden mb-8 bg-gradient-to-br from-[#6900CC]/40 via-black to-[#39B14A]/40">
-              <div className="absolute inset-0 flex items-center justify-center text-3xl font-bold text-white/20">
-                Abstract {currentTab?.label} Visual
-              </div>
-              <div className="absolute inset-0 bg-gradient-to-tr from-[#6900CC]/10 via-transparent to-[#39B14A]/10 animate-pulse-slow opacity-50" />
-            </div>
+            HOW WE WORK
+          </motion.p>
 
-            <div className="space-y-6">
-              <h3 className="text-2xl md:text-3xl font-bold text-white">
-                {currentTab?.title}
+          <motion.h2
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-gray-900 leading-[1.05] mb-6"
+          >
+            A structured media process built for{" "}
+            <span className="bg-gradient-to-r from-orange-600 via-violet-600 to-purple-600 bg-clip-text text-transparent">
+              better campaign outcomes
+            </span>
+          </motion.h2>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="text-gray-600 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed"
+          >
+            Successful media campaigns need more than ad placements. At Admatrix, 
+            we follow a disciplined 6-step process to keep every campaign focused, 
+            measurable, and scalable.
+          </motion.p>
+        </div>
+
+        {/* Process Steps Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+          {processSteps.map((step, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: index * 0.08 }}
+              className="group relative bg-white border border-gray-100 rounded-3xl p-8 hover:border-orange-200 hover:shadow-2xl hover:-translate-y-1 transition-all duration-500"
+            >
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-12 h-12 flex items-center justify-center bg-gradient-to-br from-orange-500 to-violet-600 text-white font-black text-xl rounded-2xl shadow-md">
+                  {step.number}
+                </div>
+                <div className="text-orange-600 group-hover:text-violet-600 transition-colors">
+                  {step.icon}
+                </div>
+              </div>
+
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                {step.title}
               </h3>
-              <p className="text-lg md:text-xl leading-relaxed text-gray-200">
-                {currentTab?.desc}
+
+              <p className="text-gray-600 leading-relaxed">
+                {step.desc}
               </p>
 
-              <div className="flex flex-wrap gap-x-6 gap-y-2 pt-4">
-                {currentTab?.bullets.map((bullet, idx) => (
-                  <div key={idx} className="flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 bg-[#39b14a] rounded-full" />
-                    <span className="text-sm md:text-base font-medium text-gray-300">
-                      {bullet}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </motion.div>
+              <div className="h-0.5 w-12 bg-gradient-to-r from-orange-400 to-violet-400 mt-8 scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
+            </motion.div>
+          ))}
         </div>
+
+        {/* CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mt-16"
+        >
+          <a
+            href="/contact"
+            className="inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-orange-500 to-violet-600 text-white font-bold text-lg rounded-full shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all"
+          >
+            Start Your Campaign
+            <ArrowRight className="w-5 h-5" />
+          </a>
+        </motion.div>
       </div>
     </section>
   );
-};
-
-export default DeliveryAndOffer;
+}

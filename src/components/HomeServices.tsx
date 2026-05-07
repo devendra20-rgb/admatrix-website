@@ -3,57 +3,93 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Palette, Zap, Globe, ArrowRight } from "lucide-react";
+import { Palette, Zap, Globe, Target, TrendingUp, Lightbulb, BarChart3, ArrowRight } from "lucide-react";
 
 const homeServices = [
   {
-    title: "Branding & Performance",
-    icon: <Palette className="w-10 h-10" />,
-    oneLiner:
-      "Sharp creative backed by data. We build brand identities that convert through paid social, programmatic, and full-funnel media strategies designed for real Local audiences, not global templates.",
+    title: "Full-Funnel Media Strategy",
+    icon: <Target className="w-10 h-10" />,
+    oneLiner: "We build connected media plans that guide users from awareness to consideration, conversion, and retention.",
     microText: [
-      "Paid Social (Meta, TikTok, Snapchat)",
-      "Programmatic & DV360 / The Trade Desk",
-      "DSP",
-      "Full-Funnel Conversion Growth",
-      "Creative Development",
+      "Funnel planning",
+      "Audience segmentation",
+      "Channel strategy",
+      "Budget allocation",
+      "Campaign roadmap",
+      "KPI planning",
     ],
-    link: "/services#branding",
+    link: "/services#full-funnel",
   },
   {
-    title: "Activations & Events",
-    icon: <Zap className="w-10 h-10" />,
-    oneLiner:
-      "We turn brand moments into memories. From retail takeovers to immersive experiential concepts, we design activations that earn attention, generate content, and leave a mark long after the day is done.",
+    title: "Performance Marketing",
+    icon: <TrendingUp className="w-10 h-10" />,
+    oneLiner: "Performance-led campaigns focused on measurable actions like leads, purchases, sign-ups, and conversions.",
     microText: [
-      "Below the Line (BTL) Campaigns",
-      "Live Events & Brand Launches",
-      "Retail & In-Store Activations",
-      "Experiential & Immersive Concepts",
+      "Lead generation campaigns",
+      "CPA, CPL, CPI & ROAS focus",
+      "Conversion tracking",
+      "A/B testing & optimization",
     ],
-    link: "/services#events",
+    link: "/services#performance",
   },
   {
-    title: "Outdoor & DOOH",
+    title: "User Acquisition",
     icon: <Globe className="w-10 h-10" />,
-    oneLiner:
-      "Own the streets, the screens, and the commute. We plan and execute OOH and DOOH campaigns that command visibility for Local & Global markets .",
+    oneLiner: "Quality user acquisition through targeted media buying, performance campaigns, and event optimization.",
     microText: [
-      "Classic & Digital Billboards",
-      "Transit & Airport Advertising",
-      "DOOH Programmatic Buying",
-      "Mall & Retail Media",
+      "App install campaigns",
+      "CPI & CPA buying",
+      "Retargeting & re-engagement",
+      "Fraud monitoring",
     ],
-    link: "/services#outdoor",
+    link: "/services#user-acquisition",
+  },
+  {
+    title: "Programmatic & Display",
+    icon: <Zap className="w-10 h-10" />,
+    oneLiner: "Reach relevant audiences across premium inventory using programmatic buying and real-time optimization.",
+    microText: [
+      "Programmatic media buying",
+      "Display advertising",
+      "DSP campaigns",
+      "Contextual & audience targeting",
+    ],
+    link: "/services#programmatic",
+  },
+  {
+    title: "Paid Social & Search",
+    icon: <Palette className="w-10 h-10" />,
+    oneLiner: "Strategic campaigns across Meta, Google, YouTube, LinkedIn, TikTok & more to drive awareness and conversions.",
+    microText: [
+      "Meta, TikTok & Snapchat Ads",
+      "Google Ads & YouTube",
+      "LinkedIn Advertising",
+      "Search & Performance Max",
+    ],
+    link: "/services#paid-social",
+  },
+  {
+    title: "Creative Strategy & Content",
+    icon: <Lightbulb className="w-10 h-10" />,
+    oneLiner: "Platform-ready creative concepts, messaging, and visuals that actually perform in today’s feed.",
+    microText: [
+      "Campaign messaging",
+      "Ad copywriting",
+      "Static & video creatives",
+      "Performance creative testing",
+    ],
+    link: "/services#creative",
   },
 ];
 
 export default function HomeServices() {
   return (
-    // Background changed to dark for better gradient contrast
     <section className="relative w-full bg-white py-24 md:py-32 px-6 md:px-12 lg:px-16 overflow-hidden">
-      {/* Subtle background glow */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_center,rgba(105,0,204,0.1)_0%,transparent_70%)] pointer-events-none" />
+      {/* Background Glows */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_center,rgba(249,115,22,0.08)_0%,transparent_60%)]" />
+        <div className="absolute bottom-0 right-0 w-2/3 h-2/3 bg-[radial-gradient(circle,rgba(139,92,246,0.08)_0%,transparent_70%)]" />
+      </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
@@ -62,96 +98,75 @@ export default function HomeServices() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="text-[#39b14a] uppercase tracking-[0.3em] text-sm md:text-base font-bold mb-6"
+            className="text-orange-600 uppercase tracking-[0.3em] text-sm md:text-base font-bold mb-6"
           >
-            WHAT WE DO
+            WHAT WE DO BEST
           </motion.p>
 
-          <div className="text-center mb-16 md:mb-24 px-6">
-            {/* Eyebrow */}
-            {/* <motion.p
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="text-[#39b14a] uppercase tracking-[0.3em] text-sm md:text-base font-bold mb-6"
-            >
-              Creating Systems for the Attention Economy
-            </motion.p> */}
+          <motion.h2
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.9, delay: 0.2 }}
+            className="text-4xl md:text-5xl lg:text-7xl font-black tracking-tight leading-[1.1] text-gray-900 mb-8"
+          >
+            End-to-End Solutions for<br className="hidden md:block" /> 
+            <span className="bg-gradient-to-r from-orange-600 via-violet-600 to-purple-600 bg-clip-text text-transparent">
+              Business Growth
+            </span>
+          </motion.h2>
 
-            {/* Heading - Added mb-10 for better gap */}
-            <motion.h2
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.9, delay: 0.2 }}
-              className="text-4xl md:text-5xl lg:text-7xl font-black tracking-tight leading-[1.1] text-black mb-10"
-            >
-              Creating Systems for <br className="hidden md:block" />
-              <span className="bg-gradient-to-r from-[#6900cc] to-[#39b14a] bg-clip-text text-transparent">
-                the Attention Economy
-              </span>
-            </motion.h2>
-
-            {/* Intro Paragraph - Now OUTSIDE of h2 */}
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-gray-500 text-lg md:text-xl font-medium max-w-3xl mx-auto leading-relaxed"
-            >
-              We combine performance intelligence with creative ambition and we
-              execute across every channel that moves your audience.
-            </motion.p>
-          </div>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="text-gray-600 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed"
+          >
+            From strategy to execution — we combine data intelligence with creative excellence.
+          </motion.p>
         </div>
 
-        {/* Cards Grid */}
-        <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
+        {/* 6 Cards Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
           {homeServices.map((service, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 50 }}
+              initial={{ opacity: 0, y: 60 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: i * 0.2 }}
-              // Card background changed to dark with subtle border
-              className="group relative bg-[#f8f8f8] rounded-3xl p-8 md:p-10 border border-white/10 hover:border-[#6900cc]/50 transition-all duration-500 overflow-hidden"
+              transition={{ duration: 0.7, delay: i * 0.1 }}
+              className="group relative bg-white rounded-3xl p-8 md:p-9 border border-gray-100 hover:border-orange-200 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500"
             >
-              {/* Gradient border effect on hover */}
-              <div className="absolute inset-0 bg-gradient-to-br from-[#6900cc]/5 to-[#39b14a]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-
-              {/* Icon with Gradient Background */}
-              <div className="relative w-16 h-16 bg-gradient-to-br from-[#6900cc] to-[#39b14a] rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-purple-900/20">
+              {/* Icon */}
+              <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-violet-600 rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-orange-500/20 group-hover:scale-110 transition-transform">
                 <div className="text-white">{service.icon}</div>
               </div>
 
               {/* Title */}
-              <h3 className="relative text-2xl md:text-3xl font-black text-black mb-4 leading-tight">
+              <h3 className="text-2xl md:text-3xl font-black text-gray-900 mb-4 leading-tight">
                 {service.title}
               </h3>
 
-              {/* 1-liner */}
-              <p className="relative text-gray-400 text-lg font-medium mb-6 leading-relaxed">
+              {/* One Liner */}
+              <p className="text-gray-600 text-[17px] leading-relaxed mb-8">
                 {service.oneLiner}
               </p>
 
-              {/* Micro text bullets */}
-              <ul className="relative space-y-3 text-sm text-gray-500 mb-8">
+              {/* Micro Points */}
+              <ul className="space-y-3 text-sm text-gray-500 mb-10">
                 {service.microText.map((item, idx) => (
-                  <li key={idx} className="flex items-center gap-3">
-                    <span className="w-2 h-2 bg-gradient-to-r from-[#6900cc] to-[#39b14a] rounded-full flex-shrink-0"></span>
+                  <li key={idx} className="flex items-start gap-3">
+                    <span className="mt-1.5 w-1.5 h-1.5 bg-gradient-to-r from-orange-500 to-violet-600 rounded-full flex-shrink-0" />
                     {item}
                   </li>
                 ))}
               </ul>
 
-              {/* Learn More Link */}
+              {/* CTA */}
               <Link
                 href={service.link}
-                className="relative inline-flex items-center gap-2 font-bold uppercase tracking-widest text-sm text-[#39b14a] hover:text-[#6900cc] transition-colors group/link"
+                className="inline-flex items-center gap-2 font-semibold text-orange-600 hover:text-violet-600 group/link transition-colors"
               >
                 Learn More
                 <ArrowRight className="w-5 h-5 group-hover/link:translate-x-1 transition-transform" />
@@ -160,16 +175,16 @@ export default function HomeServices() {
           ))}
         </div>
 
-        {/* Explore All Services CTA */}
+        {/* Bottom CTA */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="text-center mt-16 md:mt-20"
+          transition={{ duration: 0.8 }}
+          className="text-center mt-20"
         >
           <Link href="/services">
-            <button className="group relative inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-[#6900cc] to-[#39b14a] text-white font-bold text-lg rounded-full shadow-xl shadow-purple-900/20 transition-all duration-300 hover:scale-105 active:scale-95">
+            <button className="group relative inline-flex items-center gap-3 px-12 py-6 bg-gradient-to-r from-orange-500 to-violet-600 text-white font-bold text-lg rounded-full shadow-xl shadow-orange-500/30 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
               Explore All Services
               <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
             </button>

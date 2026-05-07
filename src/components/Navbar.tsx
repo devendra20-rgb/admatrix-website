@@ -5,16 +5,17 @@ import Link from "next/link";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [open, setOpen] = useState(false); // mobile menu open
-  const [servicesExpanded, setServicesExpanded] = useState(false); // mobile services accordion
+  const [open, setOpen] = useState(false);
+  const [servicesExpanded, setServicesExpanded] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 80);
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 80);
+    };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Mobile menu close karne pe accordion bhi reset kar do (optional)
   const handleMobileClose = () => {
     setOpen(false);
     setServicesExpanded(false);
@@ -23,7 +24,9 @@ const Navbar = () => {
   return (
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
-        isScrolled ? "bg-[#6900CC] shadow-md" : "bg-transparent"
+        isScrolled 
+          ? "bg-white shadow-lg border-b border-gray-100" 
+          : "bg-transparent"
       }`}
     >
       <div className="w-full max-w-[1500px] mx-auto px-4 sm:px-6 md:px-10">
@@ -33,7 +36,7 @@ const Navbar = () => {
             <Link href="/" className="transition-opacity hover:opacity-90">
               <img
                 src="/5th-eleLogo.png"
-                alt="5th Element Logo"
+                alt="Admatrix Digital"
                 className="h-12 md:h-14 w-auto object-contain cursor-pointer"
               />
             </Link>
@@ -41,67 +44,78 @@ const Navbar = () => {
 
           {/* DESKTOP NAV */}
           <nav
-            className={`hidden lg:flex items-center gap-8 text-[13px] font-extrabold uppercase tracking-widest ${
-              isScrolled ? "text-white" : "text-white"
+            className={`hidden lg:flex items-center gap-8 text-[13px] font-extrabold uppercase tracking-widest transition-colors ${
+              isScrolled ? "text-gray-800" : "text-gray-900"
             }`}
           >
-            {/* Services Dropdown - Desktop (pure CSS hover) */}
+            {/* Services Dropdown */}
             <div className="relative group">
-              <button className="flex items-center gap-1 hover:text-white/80 transition py-2">
+              <button 
+                className={`flex items-center gap-1 py-2 transition hover:text-orange-600 ${
+                  isScrolled ? "text-gray-800" : "text-gray-900"
+                }`}
+              >
                 SERVICES <ChevronDown size={14} />
               </button>
 
-              {/* Dropdown Container */}
-              <div
-                className={`
-      absolute top-full left-0 w-64 pt-3
-      opacity-0 invisible group-hover:opacity-100 group-hover:visible 
-      transition-all duration-200 z-50
-    `}
-              >
-                {/* Inner Box - Actual Background */}
-                <div className="bg-black/95 backdrop-blur-md border border-white/10 rounded-lg shadow-2xl overflow-hidden">
-                  <div className="flex flex-col">
-                    <Link
-                      href="/services#branding"
-                      className="flex items-center justify-between px-6 py-3 hover:bg-white/10 transition text-sm font-bold uppercase tracking-wider text-white"
-                    >
-                      Branding + Promotion
-                      <ChevronRight size={16} className="text-white/60" />
-                    </Link>
-
-                    <Link
-                      href="/services#events"
-                      className="flex items-center justify-between px-6 py-3 hover:bg-white/10 transition text-sm font-bold uppercase tracking-wider text-white"
-                    >
-                      Activation & Events
-                      <ChevronRight size={16} className="text-white/60" />
-                    </Link>
-
-                    <Link
-                      href="/services#outdoor"
-                      className="flex items-center justify-between px-6 py-3 hover:bg-white/10 transition text-sm font-bold uppercase tracking-wider text-white"
-                    >
-                      Outdoor Advertising
-                      <ChevronRight size={16} className="text-white/60" />
-                    </Link>
-                  </div>
+              <div className="absolute top-full left-0 w-64 pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                <div className="bg-white border border-gray-100 rounded-2xl shadow-xl overflow-hidden py-2">
+                  <Link
+                    href="/services#branding"
+                    className="flex items-center justify-between px-6 py-3.5 hover:bg-orange-50 text-gray-700 hover:text-orange-600 transition text-sm font-bold uppercase tracking-wider"
+                  >
+                    Branding + Promotion
+                    <ChevronRight size={16} className="text-gray-400" />
+                  </Link>
+                  <Link
+                    href="/services#events"
+                    className="flex items-center justify-between px-6 py-3.5 hover:bg-orange-50 text-gray-700 hover:text-orange-600 transition text-sm font-bold uppercase tracking-wider"
+                  >
+                    Activation & Events
+                    <ChevronRight size={16} className="text-gray-400" />
+                  </Link>
+                  <Link
+                    href="/services#outdoor"
+                    className="flex items-center justify-between px-6 py-3.5 hover:bg-orange-50 text-gray-700 hover:text-orange-600 transition text-sm font-bold uppercase tracking-wider"
+                  >
+                    Outdoor Advertising
+                    <ChevronRight size={16} className="text-gray-400" />
+                  </Link>
+                  <Link
+                    href="/services#branding"
+                    className="flex items-center justify-between px-6 py-3.5 hover:bg-orange-50 text-gray-700 hover:text-orange-600 transition text-sm font-bold uppercase tracking-wider"
+                  >
+                    Branding + Promotion
+                    <ChevronRight size={16} className="text-gray-400" />
+                  </Link>
+                  <Link
+                    href="/services#events"
+                    className="flex items-center justify-between px-6 py-3.5 hover:bg-orange-50 text-gray-700 hover:text-orange-600 transition text-sm font-bold uppercase tracking-wider"
+                  >
+                    Activation & Events
+                    <ChevronRight size={16} className="text-gray-400" />
+                  </Link>
+                  <Link
+                    href="/services#outdoor"
+                    className="flex items-center justify-between px-6 py-3.5 hover:bg-orange-50 text-gray-700 hover:text-orange-600 transition text-sm font-bold uppercase tracking-wider"
+                  >
+                    Outdoor Advertising
+                    <ChevronRight size={16} className="text-gray-400" />
+                  </Link>
                 </div>
               </div>
             </div>
-            <Link
-              href="/case-studies"
-              className="hover:text-white/80 transition"
-            >
+
+            {/* <Link href="/case-studies" className="hover:text-orange-600 transition">
               Case Studies
-            </Link>
-            <Link href="/gallery" className="hover:text-white/80 transition">
+            </Link> */}
+            <Link href="/gallery" className="hover:text-orange-600 transition">
               Gallery
             </Link>
-            <Link href="/about-us" className="hover:text-white/80 transition">
+            <Link href="/about-us" className="hover:text-orange-600 transition">
               About Us
             </Link>
-            <Link href="/careers" className="hover:text-white/80 transition">
+            <Link href="/careers" className="hover:text-orange-600 transition">
               Careers
             </Link>
           </nav>
@@ -110,18 +124,20 @@ const Navbar = () => {
           <div className="flex items-center gap-3">
             <Link
               href="/contact"
-              className={`hidden sm:block px-6 md:px-8 py-2.5 rounded-full text-[11px] font-black uppercase tracking-widest border transition-all ${
+              className={`hidden sm:block px-7 py-3 rounded-full text-[11px] font-black uppercase tracking-widest transition-all duration-300 ${
                 isScrolled
-                  ? "border-white text-white hover:bg-white hover:text-[#6900CC]"
-                  : "border-white/30 text-white hover:bg-white hover:text-black"
+                  ? "bg-gradient-to-r from-orange-500 to-violet-600 text-white hover:shadow-xl hover:shadow-orange-500/30"
+                  : "border-2 border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white"
               }`}
             >
-              Start a Project 
+              Start a Project
             </Link>
 
             <button
               onClick={() => setOpen(!open)}
-              className={`lg:hidden text-white`}
+              className={`lg:hidden transition-colors ${
+                isScrolled ? "text-gray-800" : "text-gray-900"
+              }`}
             >
               {open ? <X size={28} /> : <Menu size={28} />}
             </button>
@@ -129,98 +145,69 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* MOBILE MENU - Full screen */}
+      {/* MOBILE MENU */}
       {open && (
-        <div className="fixed inset-0 bg-black/95 backdrop-blur-md z-40 lg:hidden flex flex-col">
-          <div className="flex justify-end p-6">
-            <button onClick={handleMobileClose} className="text-white">
+        <div className="fixed inset-0 bg-white z-40 lg:hidden flex flex-col">
+          <div className="flex justify-end p-6 border-b">
+            <button onClick={handleMobileClose} className="text-gray-800">
               <X size={32} />
             </button>
           </div>
 
           <div className="flex-grow flex flex-col items-center justify-center px-6 space-y-8 text-center">
-            {/* Services Accordion in Mobile */}
             <div className="w-full max-w-xs">
               <button
                 onClick={() => setServicesExpanded(!servicesExpanded)}
-                className="w-full flex items-center justify-between text-white text-2xl font-bold py-4 border-b border-white/20"
+                className="w-full flex items-center justify-between text-gray-900 text-2xl font-bold py-5 border-b border-gray-200"
               >
                 Services
-                {servicesExpanded ? (
-                  <ChevronUp size={24} />
-                ) : (
-                  <ChevronDown size={24} />
-                )}
+                {servicesExpanded ? <ChevronUp size={28} /> : <ChevronDown size={28} />}
               </button>
 
-              {/* Sub-items - accordion content */}
               {servicesExpanded && (
-                <div className="bg-white/10 rounded-lg mt-2 overflow-hidden">
-                  <Link
-                    href="/services#branding"
-                    className="block px-6 py-4 text-white text-xl hover:bg-white/20 transition"
-                    onClick={handleMobileClose}
-                  >
+                <div className="bg-gray-50 rounded-2xl mt-3 overflow-hidden border border-gray-100">
+                  <Link href="/services#branding" className="block px-6 py-5 text-gray-700 text-xl hover:bg-orange-50 hover:text-orange-600" onClick={handleMobileClose}>
                     Branding + Promotion
                   </Link>
-                  <Link
-                    href="/services#events"
-                    className="block px-6 py-4 text-white text-xl hover:bg-white/20 transition"
-                    onClick={handleMobileClose}
-                  >
+                  <Link href="/services#events" className="block px-6 py-5 text-gray-700 text-xl hover:bg-orange-50 hover:text-orange-600" onClick={handleMobileClose}>
                     Activation & Events
                   </Link>
-                  <Link
-                    href="/services#outdoor"
-                    className="block px-6 py-4 text-white text-xl hover:bg-white/20 transition"
-                    onClick={handleMobileClose}
-                  >
+                  <Link href="/services#outdoor" className="block px-6 py-5 text-gray-700 text-xl hover:bg-orange-50 hover:text-orange-600" onClick={handleMobileClose}>
                     Outdoor Advertising
                   </Link>
+                  <Link href="/services#branding" className="block px-6 py-5 text-gray-700 text-xl hover:bg-orange-50 hover:text-orange-600" onClick={handleMobileClose}>
+                    Branding + Promotion
+                  </Link>
+                  <Link href="/services#events" className="block px-6 py-5 text-gray-700 text-xl hover:bg-orange-50 hover:text-orange-600" onClick={handleMobileClose}>
+                    Activation & Events
+                  </Link>
+                  <Link href="/services#outdoor" className="block px-6 py-5 text-gray-700 text-xl hover:bg-orange-50 hover:text-orange-600" onClick={handleMobileClose}>
+                    Outdoor Advertising
+                  </Link>
+
                 </div>
               )}
             </div>
 
-            {/* Other links */}
-            <Link
-              href="/case-studies"
-              className="text-white text-2xl font-bold"
-              onClick={handleMobileClose}
-            >
+            {/* <Link href="/case-studies" className="text-gray-900 text-2xl font-bold hover:text-orange-600" onClick={handleMobileClose}>
               Case Studies
-            </Link>
-
-            <Link
-              href="/gallery"
-              className="text-white text-2xl font-bold"
-              onClick={handleMobileClose}
-            >
+            </Link> */}
+            <Link href="/gallery" className="text-gray-900 text-2xl font-bold hover:text-orange-600" onClick={handleMobileClose}>
               Gallery
             </Link>
-
-            <Link
-              href="/about-us"
-              className="text-white text-2xl font-bold"
-              onClick={handleMobileClose}
-            >
+            <Link href="/about-us" className="text-gray-900 text-2xl font-bold hover:text-orange-600" onClick={handleMobileClose}>
               About Us
             </Link>
-
-            <Link
-              href="/careers"
-              className="text-white text-2xl font-bold"
-              onClick={handleMobileClose}
-            >
+            <Link href="/careers" className="text-gray-900 text-2xl font-bold hover:text-orange-600" onClick={handleMobileClose}>
               Careers
             </Link>
 
-            {/* Contact */}
             <Link
               href="/contact"
-              className="mt-8 w-3/4 max-w-xs bg-[#39b14a] text-white py-4 rounded-full font-bold text-xl hover:bg-red-700 transition text-center"
+              className="mt-10 w-3/4 max-w-xs bg-gradient-to-r from-orange-500 to-violet-600 text-white py-5 rounded-full font-bold text-xl hover:brightness-110 transition text-center"
               onClick={handleMobileClose}
             >
-              Contact us
+              Start a Project
             </Link>
           </div>
         </div>
