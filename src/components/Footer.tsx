@@ -1,226 +1,251 @@
-// "use client";
-
-// import React from "react";
-// import { Facebook, Twitter, Linkedin } from "lucide-react";
-// import Link from "next/link";
-
-// const Footer = () => {
-//   return (
-//     <footer className="bg-black text-white pt-16 pb-10 relative overflow-hidden border-t border-[#6900CC]/30">
-
-//       {/* 🔥 TOP RED GLOW */}
-//       <div className="absolute top-0 left-0 w-full h-40 bg-gradient-to-b from-[#6900CC]/20 via-transparent to-transparent pointer-events-none"></div>
-
-//       <div className="max-w-[1400px] mx-auto px-6 md:px-10 lg:px-12 relative">
-
-//         {/* 🔷 TOP GRID */}
-//         <div className="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-8 lg:gap-10 mb-12 relative">
-
-//           {/* LEFT */}
-//           <div className="lg:col-span-3">
-//             <img src="/5th-eleLogo.png" className="h-12 mb-6" alt="5th Element Logo" />
-
-//             <p className="text-[#6900CC] text-xl md:text-2xl font-medium mb-6 leading-tight">
-//               Integrated Marketing. <br /> Measurable Impact.
-//             </p>
-
-//             <div className="flex gap-4 text-gray-400">
-//               <Facebook size={20} className="hover:text-white cursor-pointer" />
-//               <Twitter size={20} className="hover:text-white cursor-pointer" />
-//               <Linkedin size={20} className="hover:text-white cursor-pointer" />
-//             </div>
-//           </div>
-
-//           {/* 🔸 Divider 1 */}
-//           <div className="hidden lg:block absolute left-[25%] top-0 h-full w-px bg-white/10"></div>
-
-//           {/* MIDDLE */}
-//           <div className="lg:col-span-3">
-//             <h3 className="text-sm font-bold uppercase tracking-widest mb-6 text-white flex items-center gap-2">
-//               <span className="w-1.5 h-1.5 bg-[#6900CC] rounded-full"></span>
-//               Quick Links
-//             </h3>
-
-//             <div className="space-y-4 text-sm text-gray-400">
-//               <Link href="/about-us" className="block hover:text-white">About Us</Link>
-//               <Link href="/careers" className="block hover:text-white">Careers</Link>
-//               <Link href="/case-studies" className="block hover:text-white">Case Studies</Link>
-//               <Link href="/gallery" className="block hover:text-white">Gallery</Link>
-//               <Link href="/contact" className="block hover:text-white">Contact</Link>
-//             </div>
-
-//             <div className="pt-6 border-t border-white/10 mt-6 space-y-2 text-sm text-gray-400">
-//               <p>📞 +1 212 555 1234</p>
-//               <p>✉️ hello@5thelement.agency</p>
-//             </div>
-//           </div>
-
-//           {/* 🔸 Divider 2 */}
-//           <div className="hidden lg:block absolute left-[50%] top-0 h-full w-px bg-white/10"></div>
-
-//           {/* RIGHT - NEWSLETTER */}
-//           <div className="lg:col-span-6">
-//             <h3 className="text-base md:text-lg font-bold uppercase tracking-widest mb-4 text-[#6900CC]">
-//               Subscribe to Our Newsletter
-//             </h3>
-
-//             <p className="text-sm md:text-base text-gray-400 mb-6">
-//               Get marketing insights, case studies, and updates straight to your inbox.
-//             </p>
-
-//             <form className="space-y-4 max-w-[520px]">
-//               <input
-//                 placeholder="Your first name"
-//                 className="w-full bg-[#1a1a1a] rounded-full px-6 py-3 text-base placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#ff2a4d]"
-//               />
-
-//               <input
-//                 placeholder="Your work email address*"
-//                 className="w-full bg-[#1a1a1a] rounded-full px-6 py-3 text-base placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#ff2a4d]"
-//                 type="email"
-//               />
-
-//               <button className="w-full bg-[#6900CC] rounded-full py-3 text-base font-bold uppercase tracking-widest hover:bg-[#5a00b3] transition">
-//                 Subscribe Now
-//               </button>
-//             </form>
-
-//             <p className="text-xs text-gray-500 mt-4">
-//               By subscribing, you agree to our Privacy Policy.
-//             </p>
-//           </div>
-//         </div>
-
-//         {/* 🔻 BOTTOM STRIP */}
-//         <div className="border-t border-white/10 pt-6 mt-10">
-
-//           <div className="flex flex-col lg:flex-row items-center justify-between gap-6 text-gray-400">
-
-//             {/* Social */}
-//             <div className="flex gap-4">
-//               <Facebook size={18} />
-//               <Twitter size={18} />
-//               <Linkedin size={18} />
-//             </div>
-
-//             {/* Locations */}
-//             <div className="flex gap-10 text-sm">
-//               <span>New York</span>
-//               <span>London</span>
-//               <span>Shanghai</span>
-//             </div>
-
-//             {/* Legal */}
-//             <div className="flex gap-6 text-sm">
-//               <Link href="/privacy-policy">Privacy Policy</Link>
-//               <Link href="/terms-and-conditions">Terms & Conditions</Link>
-//             </div>
-
-//           </div>
-
-//           <p className="text-center text-xs text-gray-600 mt-6">
-//             © {new Date().getFullYear()} 5th Element. All rights reserved.
-//           </p>
-//         </div>
-
-//       </div>
-//     </footer>
-//   );
-// };
-
-// export default Footer;
-
 "use client";
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Phone, Mail, Linkedin } from "lucide-react";
+import {
+  Phone,
+  Mail,
+  Linkedin,
+  ArrowUpRight,
+} from "lucide-react";
 import Link from "next/link";
+
+const quickLinks = [
+  { name: "Home", href: "/" },
+  { name: "Services", href: "/services" },
+  { name: "About Us", href: "/about" },
+  { name: "Contact Us", href: "/contact" },
+];
 
 const Footer = () => {
   return (
-    <footer className="bg-white border-t border-gray-200 pt-16 pb-10 relative overflow-hidden">
-      
-      {/* Subtle Background Accent */}
-      <div className="absolute top-0 left-0 w-full h-40 bg-gradient-to-b from-orange-50 via-violet-50/30 to-transparent pointer-events-none"></div>
+    <footer className="relative overflow-hidden bg-[#f8f5ff] border-t border-violet-100 pt-16 md:pt-18 pb-6">
 
-      <div className="max-w-[1400px] mx-auto px-6 md:px-10 lg:px-12 relative">
+      {/* BACKGROUND */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
 
-        {/* MAIN GRID */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-12 mb-12">
+        {/* PURPLE GLOW */}
+        <motion.div
+          animate={{
+            scale: [1, 1.08, 1],
+            opacity: [0.35, 0.6, 0.35],
+          }}
+          transition={{
+            duration: 10,
+            repeat: Infinity,
+          }}
+          className="absolute top-[-20%] left-[-10%] w-[700px] h-[700px] rounded-full bg-violet-300/25 blur-[150px]"
+        />
 
-          {/* 1. Logo & Tagline */}
-          <div className="md:col-span-12 lg:col-span-3">
-            <img src="/5th-eleLogo.png" className="h-12 mb-6" alt="Admatrix Logo" />
+        {/* ORANGE GLOW */}
+        <motion.div
+          animate={{
+            y: [0, 40, 0],
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+          }}
+          className="absolute bottom-[-20%] right-[-10%] w-[650px] h-[650px] rounded-full bg-orange-200/30 blur-[140px]"
+        />
 
-            <p className="text-gray-900 text-xl md:text-2xl font-medium leading-tight mb-6">
-              Integrated Marketing.<br /> Measurable Impact.
+        {/* LIGHT OVERLAY */}
+        <div className="absolute inset-0 bg-gradient-to-b from-violet-50/60 via-white/40 to-orange-50/40" />
+
+        {/* GRID */}
+        <div className="absolute inset-0 bg-[radial-gradient(rgba(139,92,246,0.05)_1px,transparent_1px)] [background-size:38px_38px]" />
+      </div>
+
+      <div className="relative z-10 max-w-[1550px] mx-auto px-6 md:px-10 lg:px-16">
+
+        {/* TOP SECTION */}
+        <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-12 pb-12 border-b border-violet-100">
+
+          {/* LEFT */}
+          <div>
+
+            {/* LOGO */}
+            <img
+              src="/Admatrix(1).png"
+              alt="Admatrix Logo"
+              className="h-14 md:h-16 w-auto mb-5"
+            />
+
+            {/* TITLE */}
+            <h2 className="text-[#151515] text-2xl md:text-4xl font-black leading-[1.05] tracking-tight mb-5">
+              Admatrix —
+              <br />
+
+              <span className="bg-gradient-to-r from-violet-600 via-purple-600 to-orange-500 bg-clip-text text-transparent">
+                Full-Funnel
+              </span>
+
+              <br />
+              Digital Media Agency
+            </h2>
+
+            {/* DESCRIPTION */}
+            <p className="text-gray-600 text-[14px] md:text-[15px] leading-[1.8] max-w-2xl">
+              We help brands grow through media strategy,
+              performance marketing, user acquisition,
+              programmatic buying, creative strategy,
+              and data-led campaign optimization.
+              Because in digital, the best story isn't
+              the one with the biggest budget —
+              it's the one with the smartest plan.
             </p>
 
-            <div className="flex gap-5 text-gray-400">
-              <Linkedin size={22} className="hover:text-violet-600 cursor-pointer transition-colors" />
+            {/* SOCIAL */}
+            <div className="flex items-center gap-5 mt-6">
+
+              <motion.a
+                whileHover={{
+                  y: -4,
+                  scale: 1.05,
+                }}
+                href="#"
+                className="w-12 h-12 rounded-2xl bg-white/70 backdrop-blur-xl border border-white/80 shadow-[0_10px_30px_rgba(139,92,246,0.08)] flex items-center justify-center text-violet-600 hover:text-orange-500 transition-all"
+              >
+                <Linkedin size={20} />
+              </motion.a>
             </div>
           </div>
 
-          {/* 2. Google Map */}
-          <div className="md:col-span-12 lg:col-span-6">
-            <div className="w-full h-64 md:h-80 rounded-3xl overflow-hidden border border-gray-100 shadow-lg">
-              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12232.21336787043!2d55.1437044!3d25.0948316!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6b966919a995%3A0x7217c7b67f9147b5!2sDubai%20Media%20City%20Building%206!5e1!3m2!1sen!2sin!4v1772476682636!5m2!1sen!2sin" 
-                width="100%" 
-                height="100%" 
-                style={{ border: 0 }} 
-                allowFullScreen 
-                loading="lazy" 
-                referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
+          {/* RIGHT */}
+          <div className="grid md:grid-cols-2 gap-10">
+
+            {/* QUICK LINKS */}
+            <div>
+
+              <p className="text-violet-600 uppercase tracking-[0.35em] text-[11px] font-black mb-7">
+                Quick Links
+              </p>
+
+              <div className="space-y-4">
+
+                {quickLinks.map((link, i) => (
+                  <motion.div
+                    key={i}
+                    whileHover={{
+                      x: 5,
+                    }}
+                  >
+                    <Link
+                      href={link.href}
+                      className="group flex items-center justify-between text-gray-700 hover:text-[#151515] transition-all text-[15px] font-semibold"
+                    >
+                      <span>{link.name}</span>
+
+                      <ArrowUpRight
+                        size={16}
+                        className="opacity-0 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all"
+                      />
+                    </Link>
+                  </motion.div>
+                ))}
+              </div>
             </div>
-          </div>
 
-          {/* 3. Quick Links + Contact */}
-          <div className="md:col-span-12 lg:col-span-3">
-            <h3 className="text-orange-600 font-bold uppercase tracking-widest mb-6 text-sm">
-              Quick Links
-            </h3>
+            {/* CONTACT */}
+            <div>
 
-            <div className="space-y-4 text-[15px] text-gray-600">
-              <Link href="/about-us" className="block hover:text-gray-900 transition-colors">About Us</Link>
-              <Link href="/services" className="block hover:text-gray-900 transition-colors">Services</Link>
-              <Link href="/case-studies" className="block hover:text-gray-900 transition-colors">Case Studies</Link>
-              <Link href="/gallery" className="block hover:text-gray-900 transition-colors">Gallery</Link>
-              <Link href="/careers" className="block hover:text-gray-900 transition-colors">Careers</Link>
-            </div>
+              <p className="text-violet-600 uppercase tracking-[0.35em] text-[11px] font-black mb-7">
+                Contact
+              </p>
 
-            <div className="mt-10 pt-8 border-t border-gray-200">
-              <h3 className="text-orange-600 font-bold uppercase tracking-widest mb-5 text-sm">Contact Us</h3>
-              
-              <div className="space-y-4 text-sm">
-                <a href="tel:+971XXXXXXXX" className="flex items-center gap-3 text-gray-600 hover:text-gray-900 transition-colors">
-                  <Phone size={18} className="text-orange-600" />
-                  <span>+971 XX XXX XXXX</span>
-                </a>
-                <a href="mailto:hello@admatrix.ae" className="flex items-center gap-3 text-gray-600 hover:text-gray-900 transition-colors">
-                  <Mail size={18} className="text-orange-600" />
-                  <span>hello@admatrix.ae</span>
-                </a>
+              <div className="space-y-4">
+
+                {/* PHONE */}
+                <motion.a
+                  whileHover={{
+                    x: 4,
+                  }}
+                  href="tel:+971XXXXXXXX"
+                  className="group flex items-start gap-4 rounded-2xl bg-white/70 backdrop-blur-xl border border-white/80 shadow-[0_10px_30px_rgba(139,92,246,0.06)] p-3.5 hover:shadow-[0_18px_45px_rgba(139,92,246,0.12)] transition-all"
+                >
+
+                  <div className="w-11 h-11 rounded-xl bg-gradient-to-r from-violet-600 to-orange-500 flex items-center justify-center text-white flex-shrink-0">
+                    <Phone size={17} />
+                  </div>
+
+                  <div>
+                    <p className="text-[#151515] text-sm font-bold mb-1">
+                      Call Us
+                    </p>
+
+                    <p className="text-gray-600 text-[13px]">
+                      +971 XX XXX XXXX
+                    </p>
+                  </div>
+                </motion.a>
+
+                {/* EMAIL */}
+                <motion.a
+                  whileHover={{
+                    x: 4,
+                  }}
+                  href="mailto:hello@admatrixagency.com"
+                  className="group flex items-start gap-4 rounded-2xl bg-white/70 backdrop-blur-xl border border-white/80 shadow-[0_10px_30px_rgba(139,92,246,0.06)] p-4 hover:shadow-[0_18px_45px_rgba(139,92,246,0.12)] transition-all"
+                >
+
+                  <div className="w-11 h-11 rounded-xl bg-gradient-to-r from-violet-600 to-orange-500 flex items-center justify-center text-white flex-shrink-0">
+                    <Mail size={17} />
+                  </div>
+
+                  <div>
+                    <p className="text-[#151515] text-sm font-bold mb-1">
+                      Email
+                    </p>
+
+                    <p className="text-gray-600 text-[13px] break-all">
+                      hello@admatrixagency.com
+                    </p>
+                  </div>
+                </motion.a>
+
+                {/* LOCATION */}
+                <div className="rounded-2xl bg-gradient-to-r from-violet-600 to-orange-500 p-[1px]">
+
+                  <div className="rounded-2xl bg-[#f8f5ff] px-5 py-4">
+
+                    <p className="text-violet-600 uppercase tracking-[0.25em] text-[9px] font-black mb-2">
+                      Location
+                    </p>
+
+                    <p className="text-[#151515] text-base font-bold">
+                      Dubai, UAE
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-
         </div>
 
-        {/* BOTTOM BAR */}
-        <div className="border-t border-gray-200 pt-8 flex flex-col md:flex-row items-center justify-between gap-6 text-xs md:text-sm text-gray-500">
-          <p>© {new Date().getFullYear()} Admatrix Digital. All Rights Reserved.</p>
-          
-          <div className="flex gap-6">
-            <Link href="/privacy-policy" className="hover:text-gray-900 transition-colors">Privacy Policy</Link>
-            <Link href="/terms-and-conditions" className="hover:text-gray-900 transition-colors">Terms & Conditions</Link>
+        {/* BOTTOM */}
+        <div className="pt-5 flex flex-col lg:flex-row items-center justify-between gap-3">
+
+          <p className="text-gray-500 text-xs md:text-sm text-center lg:text-left">
+            © 2026 Admatrix. All rights reserved.
+          </p>
+
+          <div className="flex items-center gap-5 text-xs md:text-sm text-gray-500">
+
+            <Link
+              href="/privacy-policy"
+              className="hover:text-[#151515] transition-colors"
+            >
+              Privacy Policy
+            </Link>
+
+            <Link
+              href="/terms-and-conditions"
+              className="hover:text-[#151515] transition-colors"
+            >
+              Terms & Conditions
+            </Link>
           </div>
-
-          <p className="text-center md:text-right">Dubai, United Arab Emirates</p>
         </div>
-
       </div>
     </footer>
   );

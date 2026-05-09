@@ -2,218 +2,257 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import Link from "next/link";
-import { 
-  ArrowRight, CheckCircle2, Target, Zap, Rocket, 
-  Layers, Share2, Search, Palette, BarChart3 
+import {
+  CheckCircle2,
+  Target,
+  Zap,
+  Rocket,
+  Layers,
+  Share2,
+  Search,
+  Palette,
+  BarChart3,
 } from "lucide-react";
 
 const servicesData = [
   {
     id: "media-strategy",
     title: "Media Strategy & Planning",
-    desc: "A strong campaign starts with a clear media strategy. We help brands define where to spend, who to target, and how to measure success.",
+    desc: "A media plan isn't a spreadsheet of placements. It's a blueprint for growth. We build channel strategies that match your audience, funnel, competitive landscape, and business goals — before a single rupee is spent.",
     deliverables: [
-      "Channel mix, budget split & platform selection",
-      "Full-funnel strategy (Awareness to Retention)",
-      "Audience segmentation & persona building",
-      "KPI Framework & success metrics",
-      "Budget allocation & campaign architecture",
+      "Media Planning & Platform Selection",
+      "Funnel Strategy & Customer Journey Mapping",
+      "Audience Segmentation & Intent Mapping",
+      "KPI Framework & Success Metrics",
+      "Budget Architecture & Spend Allocation",
+      "Campaign Structure Built For Scale",
     ],
-    bestFor: ["Brand launches", "New market entry", "Always-on campaigns", "Full-funnel planning"],
+    bestFor:
+      "Brand launches, new market entry, always-on campaigns, lead generation, app growth.",
     icon: <Target className="w-6 h-6" />,
-    color: "from-orange-400 to-orange-600",
+    gradient: "from-orange-500 to-orange-600",
   },
   {
     id: "performance-marketing",
     title: "Performance Marketing",
-    desc: "We run performance-led campaigns focused on measurable outcomes like leads, sales, sign-ups, and app installs.",
+    desc: "Every campaign we run is accountable to results. We test relentlessly, optimize obsessively, and scale only what proves it deserves more budget.",
     deliverables: [
-      "Lead Generation (CPL campaigns)",
-      "Conversion Campaigns (CPA, ROAS)",
-      "App Performance (CPI + event optimization)",
+      "Lead Generation Campaigns",
+      "Conversion & ROAS-Focused Media Buying",
+      "App Performance Optimization",
       "E-commerce Growth & Cart Recovery",
-      "Continuous A/B testing & optimization",
+      "Landing Page Review & Funnel Audit",
+      "Continuous Campaign Optimization",
     ],
-    bestFor: ["Lead Generation", "E-commerce Sales", "App Installs", "Customer Acquisition"],
+    bestFor:
+      "Leads, sales, installs, enquiries, subscriptions, trials, and customer acquisition.",
     icon: <Zap className="w-6 h-6" />,
-    color: "from-violet-500 to-fuchsia-600",
+    gradient: "from-violet-500 to-fuchsia-600",
   },
   {
     id: "user-acquisition",
     title: "User Acquisition & App Growth",
-    desc: "We help mobile apps and digital products acquire high-quality users through targeted paid media and optimization.",
+    desc: "App installs alone don't build a business. We acquire users who actually matter — people who engage, convert, and stick around.",
     deliverables: [
-      "App Install Campaigns (CPI/CPA)",
-      "In-app event optimization",
-      "Retargeting & re-engagement",
-      "MMP tracking support (Adjust, AppsFlyer, etc.)",
-      "Traffic quality monitoring",
+      "App Install Campaigns",
+      "Post-Install Event Optimization",
+      "MMP Support & Attribution Guidance",
+      "Retargeting & Re-engagement",
+      "Traffic Quality Monitoring",
+      "Scale Planning & Partner Expansion",
     ],
-    bestFor: ["Fintech", "E-commerce Apps", "Gaming", "Subscription Apps"],
+    bestFor:
+      "Fintech, e-commerce, gaming, travel, delivery, and subscription apps.",
     icon: <Rocket className="w-6 h-6" />,
-    color: "from-blue-500 to-indigo-600",
+    gradient: "from-blue-500 to-indigo-600",
   },
   {
     id: "programmatic",
     title: "Programmatic Media Buying",
-    desc: "Scale reach with precision using programmatic buying across premium digital inventory.",
+    desc: "Reach your audience wherever they are on the open web — with the targeting precision of a sniper and the scale of a broadcast.",
     deliverables: [
-      "DSP Campaigns & Display Advertising",
+      "DSP Campaigns",
+      "Display, Native & Video Advertising",
       "Contextual & Audience Targeting",
-      "Video & Native Placements",
-      "Brand Safety & Verification",
-      "Performance Analysis & Optimization",
+      "Behavioral & Geographic Layering",
+      "Brand Safety Controls",
+      "Inventory & Performance Analysis",
     ],
-    bestFor: ["Brand Awareness", "Retargeting", "Large-scale Reach", "Premium Inventory"],
+    bestFor:
+      "Brand awareness, retargeting, premium inventory, audience expansion, and large-scale reach.",
     icon: <Layers className="w-6 h-6" />,
-    color: "from-emerald-500 to-teal-600",
+    gradient: "from-emerald-500 to-teal-600",
   },
   {
     id: "paid-social",
     title: "Paid Social Media Advertising",
-    desc: "Strategic campaigns across Meta, LinkedIn, TikTok, Snapchat & more to drive awareness, leads, and conversions.",
+    desc: "Social isn't just where people scroll — it's where decisions are made. We build social campaigns that stop the thumb and start the funnel.",
     deliverables: [
-      "Meta (Facebook & Instagram) Ads",
-      "LinkedIn B2B Campaigns",
+      "Meta Ads",
+      "LinkedIn Advertising",
       "TikTok & Snapchat Campaigns",
-      "YouTube & Google Search",
-      "Creative Testing & Optimization",
+      "X / Twitter Campaigns",
+      "Pinterest Advertising",
+      "Platform-Specific Creative Testing",
     ],
-    bestFor: ["Social Awareness", "Lead Generation", "App Promotion", "Product Launches"],
+    bestFor:
+      "Social awareness, lead generation, traffic, app promotion, launches, and retargeting.",
     icon: <Share2 className="w-6 h-6" />,
-    color: "from-pink-500 to-rose-600",
+    gradient: "from-pink-500 to-rose-600",
   },
   {
     id: "search-youtube",
     title: "Search, YouTube & Google Ads",
-    desc: "Capture high-intent users through Google’s powerful advertising ecosystem.",
+    desc: "When your audience is actively searching, we make sure it's your brand they find. When they're watching or discovering — we put you in the frame.",
     deliverables: [
       "Google Search Campaigns",
-      "Performance Max Campaigns",
-      "YouTube Video Advertising",
+      "Performance Max",
       "Demand Gen Campaigns",
-      "Remarketing & Audience Targeting",
+      "YouTube Advertising",
+      "Display Advertising",
+      "Remarketing Campaigns",
     ],
-    bestFor: ["High-intent Traffic", "Lead Generation", "Brand Discovery", "Video Reach"],
+    bestFor:
+      "High-intent traffic, lead generation, video reach, sales, and remarketing.",
     icon: <Search className="w-6 h-6" />,
-    color: "from-amber-400 to-orange-500",
+    gradient: "from-amber-400 to-orange-500",
   },
   {
     id: "creative-strategy",
     title: "Creative Strategy & Performance Creatives",
-    desc: "Strong creative that actually performs. We create platform-specific ads that drive results.",
+    desc: "The best targeting in the world won't save a bad creative. We make sure your ads stop people in their tracks — and give them a reason to act.",
     deliverables: [
-      "Campaign Creative Strategy",
-      "Ad Copywriting & Messaging",
-      "Static, Carousel & Video Creatives",
-      "A/B Testing & Creative Insights",
-      "Platform-specific formats",
+      "Creative Strategy & Messaging",
+      "Ad Copywriting",
+      "Static Creative Direction",
+      "Video Concepts & Storyboards",
+      "A/B Creative Testing",
+      "Creative Performance Insights",
     ],
-    bestFor: ["Paid Social", "App Campaigns", "Product Launches", "Remarketing"],
+    bestFor:
+      "Paid social, lead generation, app campaigns, launches, and creative testing.",
     icon: <Palette className="w-6 h-6" />,
-    color: "from-purple-500 to-indigo-600",
+    gradient: "from-purple-500 to-indigo-600",
   },
   {
     id: "analytics-reporting",
     title: "Analytics, Tracking & Reporting",
-    desc: "Turn data into clear insights. We provide transparent reporting to help you make better decisions.",
+    desc: "Data without clarity is noise. We translate campaign numbers into clear decisions — so you always know where your money's going and what it's doing.",
     deliverables: [
-      "Tracking Setup & Pixel Implementation",
-      "Custom Dashboards (Looker Studio)",
-      "Weekly & Monthly Performance Reports",
-      "Creative & Funnel Analysis",
-      "End-of-Campaign Insights & Recommendations",
+      "Tracking Setup Guidance",
+      "Dashboard Reporting",
+      "Weekly Campaign Reports",
+      "Creative Performance Reports",
+      "Funnel Analysis",
+      "End-of-Campaign Reporting",
     ],
-    bestFor: ["Transparent Reporting", "Data-driven Optimization", "Campaign Learning"],
+    bestFor:
+      "Brands that want transparent reporting, scalable learnings, and better decisions.",
     icon: <BarChart3 className="w-6 h-6" />,
-    color: "from-cyan-500 to-blue-600",
+    gradient: "from-cyan-500 to-blue-600",
   },
 ];
 
 export default function ServicesPage() {
   return (
-    <section className="relative w-full bg-[#fafafa] py-24 md:py-32">
-      <div className="max-w-7xl mx-auto px-6">
-        
-        {/* Header Section */}
-        <div className="max-w-4xl mb-20">
-          <motion.h2 
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            className="text-orange-600 font-bold tracking-[0.2em] uppercase text-sm mb-4"
-          >
-            Expert Services
-          </motion.h2>
-          <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="text-5xl md:text-7xl font-black text-gray-900 leading-tight mb-8"
-          >
-            Connected solutions for <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-violet-600">Digital Growth.</span>
-          </motion.h1>
-        </div>
+    <section className="relative overflow-hidden bg-[#f8f5ff] py-28 md:py-36">
 
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
+      {/* BACKGROUND */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+
+        <div className="absolute top-0 left-[10%] w-[500px] h-[500px] rounded-full bg-violet-300/20 blur-[120px]" />
+
+        <div className="absolute bottom-0 right-[5%] w-[450px] h-[450px] rounded-full bg-orange-200/30 blur-[120px]" />
+
+        <div className="absolute inset-0 bg-[radial-gradient(rgba(139,92,246,0.06)_1px,transparent_1px)] [background-size:38px_38px]" />
+      </div>
+
+      <div className="relative z-10 max-w-[1550px] mx-auto px-6 md:px-10 lg:px-16">
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
           {servicesData.map((service, index) => (
             <motion.div
               key={service.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{
+                opacity: 0,
+                y: 50,
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+              }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.05 }}
-              className="group flex flex-col bg-white border border-gray-100 rounded-[2.5rem] p-8 md:p-10 transition-all duration-500 hover:shadow-[0_40px_80px_-15px_rgba(0,0,0,0.1)] hover:border-transparent"
+              transition={{
+                duration: 0.6,
+                delay: index * 0.06,
+              }}
+              whileHover={{
+                y: -8,
+              }}
+              className="group relative overflow-hidden rounded-[36px] border border-white/70 bg-white/80 backdrop-blur-xl p-8 md:p-10 shadow-[0_12px_45px_rgba(139,92,246,0.08)] hover:shadow-[0_25px_70px_rgba(139,92,246,0.14)] transition-all duration-500"
             >
-              {/* Icon & Number Row */}
-              <div className="flex justify-between items-center mb-8">
-                <div className={`w-14 h-14 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center text-white shadow-lg`}>
+
+              {/* TOP LINE */}
+              <div className="absolute top-0 left-0 h-[3px] w-0 bg-gradient-to-r from-violet-500 to-orange-400 group-hover:w-full transition-all duration-700" />
+
+              {/* TOP */}
+              <div className="flex items-center justify-between mb-10">
+
+                <div
+                  className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.gradient} flex items-center justify-center text-white shadow-[0_12px_35px_rgba(139,92,246,0.25)]`}
+                >
                   {service.icon}
                 </div>
-                <span className="text-2xl font-black text-gray-100 group-hover:text-gray-200 transition-colors">
-                  {String(index + 1).padStart(2, '0')}
-                </span>
+
+                <div className="text-5xl font-black text-gray-100">
+                  {String(index + 1).padStart(2, "0")}
+                </div>
               </div>
 
-              {/* Title & Desc */}
-              <div className="flex-grow">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-orange-600 transition-colors leading-tight">
-                  {service.title}
-                </h3>
-                <p className="text-gray-500 leading-relaxed mb-8 text-[15px]">
-                  {service.desc}
+              {/* CONTENT */}
+              <h3 className="text-[#151515] text-3xl md:text-[36px] font-black leading-[1.05] tracking-tight mb-6">
+                {service.title}
+              </h3>
+
+              <p className="text-gray-600 text-[16px] leading-[1.9] mb-10">
+                {service.desc}
+              </p>
+
+              {/* DELIVERABLES */}
+              <div className="rounded-[28px] bg-[#faf7ff] border border-violet-100 p-6 mb-8">
+
+                <p className="text-violet-600 uppercase tracking-[0.28em] text-[10px] font-black mb-5">
+                  What We Deliver
                 </p>
 
-                {/* Deliverables Mini-Card */}
-                <div className="bg-gray-50/80 rounded-3xl p-6 mb-8 transition-colors group-hover:bg-orange-50/50">
-                  <h4 className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-4">What we deliver</h4>
-                  <ul className="space-y-3">
-                    {service.deliverables.map((item, i) => (
-                      <li key={i} className="flex items-start gap-3 text-[13px] font-medium text-gray-700 leading-tight">
-                        <CheckCircle2 className="w-4 h-4 text-orange-500 flex-shrink-0 mt-0.5" />
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
+                <div className="space-y-4">
+
+                  {service.deliverables.map((item, i) => (
+                    <div
+                      key={i}
+                      className="flex items-start gap-3"
+                    >
+                      <CheckCircle2 className="w-5 h-5 text-orange-500 flex-shrink-0 mt-0.5" />
+
+                      <p className="text-gray-700 text-[15px] leading-relaxed">
+                        {item}
+                      </p>
+                    </div>
+                  ))}
                 </div>
               </div>
 
-              {/* Footer Tags & CTA */}
-              <div className="mt-auto">
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {service.bestFor.map((tag, i) => (
-                    <span key={i} className="text-[10px] px-3 py-1.5 bg-white border border-gray-100 text-gray-500 rounded-lg whitespace-nowrap">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-                <Link 
-                  href="/contact" 
-                  className="w-full py-4 bg-gray-900 text-white rounded-2xl flex items-center justify-center gap-2 hover:bg-orange-600 transition-all font-bold group-hover:shadow-lg shadow-orange-200"
-                >
-                  Get This Service
-                  <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-                </Link>
+              {/* BEST FOR */}
+              <div className="pt-2">
+
+                <p className="text-violet-600 uppercase tracking-[0.28em] text-[10px] font-black mb-4">
+                  Best For
+                </p>
+
+                <p className="text-gray-600 text-[15px] leading-relaxed">
+                  {service.bestFor}
+                </p>
               </div>
             </motion.div>
           ))}

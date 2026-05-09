@@ -3,14 +3,14 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-export default function TermsAndConditionsPage() {
+export default function PrivacyPolicyPage() {
   return (
     <div className="min-h-screen bg-[#f8f5ff] overflow-hidden">
 
       {/* HERO */}
       <section className="relative overflow-hidden bg-[#070312] pt-[180px] md:pt-[220px] pb-24 md:pb-32">
 
-        {/* BG */}
+        {/* BACKGROUND */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
 
           <div className="absolute inset-0 bg-gradient-to-br from-[#160428] via-[#090312] to-[#1c0930]" />
@@ -29,7 +29,7 @@ export default function TermsAndConditionsPage() {
             animate={{ opacity: 1, y: 0 }}
             className="text-violet-400 uppercase tracking-[0.45em] text-[12px] font-black mb-8"
           >
-            TERMS & CONDITIONS
+            PRIVACY POLICY
           </motion.p>
 
           <motion.h1
@@ -37,15 +37,12 @@ export default function TermsAndConditionsPage() {
             animate={{ opacity: 1, y: 0 }}
             className="text-white text-5xl md:text-7xl lg:text-[88px] font-black leading-[0.95] tracking-tight mb-8"
           >
-            Terms That
+            Your Data.
             <br />
 
             <span className="bg-gradient-to-r from-violet-400 via-purple-400 to-orange-400 bg-clip-text text-transparent">
-              Guide Our
+              Protected.
             </span>
-
-            <br />
-            Partnership.
           </motion.h1>
 
           <motion.p
@@ -54,8 +51,8 @@ export default function TermsAndConditionsPage() {
             transition={{ delay: 0.2 }}
             className="text-white/65 text-lg md:text-2xl leading-relaxed max-w-4xl"
           >
-            By using our website and services, you agree to the following
-            terms and conditions established by Admatrix.
+            Admatrix values your privacy and is committed to protecting
+            your personal information with transparency and responsibility.
           </motion.p>
         </div>
       </section>
@@ -63,6 +60,7 @@ export default function TermsAndConditionsPage() {
       {/* CONTENT */}
       <section className="relative py-24 md:py-32">
 
+        {/* BG */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
 
           <div className="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] rounded-full bg-violet-200/30 blur-[120px]" />
@@ -80,36 +78,36 @@ export default function TermsAndConditionsPage() {
 
               {[
                 {
-                  title: "1. Use Of Website",
-                  text: "The content on this website is provided for general informational purposes only. Users agree to use the website responsibly and lawfully.",
+                  title: "1. Information We Collect",
+                  text: "We may collect personal information such as your name, email address, phone number, company details, and project information when you contact us or submit forms through our website.",
                 },
                 {
-                  title: "2. Intellectual Property",
-                  text: "All website content, branding, designs, visuals, text, graphics, and materials are the property of Admatrix unless otherwise stated and may not be copied or distributed without permission.",
+                  title: "2. How We Use Your Information",
+                  text: "Your information is used to communicate with you, provide requested services, improve campaign performance, respond to enquiries, and enhance the user experience across our digital platforms.",
                 },
                 {
-                  title: "3. Services & Deliverables",
-                  text: "Project timelines, deliverables, advertising performance, and campaign outcomes may vary depending on market conditions, platforms, budgets, and client cooperation.",
+                  title: "3. Data Protection",
+                  text: "We implement reasonable technical and organizational measures to protect your information from unauthorized access, misuse, disclosure, or alteration.",
                 },
                 {
-                  title: "4. Third-Party Platforms",
-                  text: "Admatrix may utilize third-party advertising platforms and software tools including Meta, Google, LinkedIn, TikTok, DSPs, and analytics providers. Platform policies remain subject to their respective terms.",
+                  title: "4. Third-Party Services",
+                  text: "Admatrix may use trusted third-party platforms and tools for analytics, advertising, CRM, communication, and campaign optimization. These services may process data in accordance with their own privacy policies.",
                 },
                 {
-                  title: "5. Limitation Of Liability",
-                  text: "Admatrix shall not be held responsible for indirect damages, business losses, platform outages, policy changes, or issues arising from third-party systems.",
+                  title: "5. Cookies & Tracking",
+                  text: "Our website may use cookies and tracking technologies to improve functionality, analyze traffic, and measure campaign performance.",
                 },
                 {
-                  title: "6. Payments & Agreements",
-                  text: "Any commercial engagement, payment terms, or campaign execution details will be governed through separate client agreements or proposals.",
+                  title: "6. Data Sharing",
+                  text: "We do not sell your personal information. Data may only be shared with trusted partners or service providers when necessary to deliver services or comply with legal obligations.",
                 },
                 {
-                  title: "7. Privacy",
-                  text: "Use of our services and website is also governed by our Privacy Policy.",
+                  title: "7. Your Rights",
+                  text: "You may request access, correction, or deletion of your personal information by contacting us directly.",
                 },
                 {
-                  title: "8. Modifications",
-                  text: "Admatrix reserves the right to update or modify these Terms & Conditions at any time without prior notice.",
+                  title: "8. Policy Updates",
+                  text: "Admatrix reserves the right to update this Privacy Policy at any time. Continued use of our website indicates acceptance of any changes.",
                 },
               ].map((item, i) => (
                 <motion.div
@@ -142,12 +140,12 @@ export default function TermsAndConditionsPage() {
               <div className="pt-6 border-t border-violet-100">
 
                 <h2 className="text-[#151515] text-2xl md:text-3xl font-black tracking-tight mb-5">
-                  Contact
+                  Contact Us
                 </h2>
 
                 <p className="text-[16px] md:text-lg leading-[1.9] text-gray-600">
-                  For questions regarding these Terms & Conditions,
-                  please contact:
+                  If you have any questions regarding this Privacy Policy,
+                  you can contact us at:
                   <br />
                   <br />
                   hello@admatrixagency.com

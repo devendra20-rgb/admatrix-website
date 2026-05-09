@@ -1,4 +1,4 @@
-"use client";   
+"use client";
 
 import Hero from "@/components/Hero";
 import ValueProposition from "@/components/ValueProposition";
@@ -11,6 +11,7 @@ import HomeGalleryPreview from "@/components/gallery/HomeGalleryPreview";
 import JoinUsCTA from "@/components/about/JoinUsCTA";
 import OurThoughts from "@/components/OurThoughts";
 import Solutions from "@/components/Solutions";
+import Advantages from "@/components/Advantages";
 
 export default function Home() {
   return (
@@ -18,18 +19,19 @@ export default function Home() {
       <Hero />
       {/* <TrustedBy /> */}
       <HomeServices />
-      
+
       <DeliveryAndOffer />
       {/* <TechShowcase /> */}
       <Solutions />
       {/* <Metrics /> */}
       {/* <Testimonials /> */}
-       {/* <CaseStudies /> */}
+      {/* <CaseStudies /> */}
+      <Advantages />
       <HomeGalleryPreview />
       <OurThoughts />
 
       {/* <ValueProposition /> */}
-     
+
       <JoinUsCTA />
     </>
   );

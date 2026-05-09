@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, Target, Lightbulb, Wrench, Rocket, TrendingUp, BarChart3 } from "lucide-react";
 
@@ -8,137 +8,166 @@ const processSteps = [
   {
     number: "01",
     title: "Understand",
-    desc: "We study your business, audience, market, competitors, objectives, and current media performance.",
+    desc: "We go deep on your business, audience, market, competitors, and current media performance. No assumptions — only insight.",
     icon: <Target className="w-6 h-6" />,
   },
   {
     number: "02",
     title: "Strategize",
-    desc: "We define the funnel, channel mix, targeting approach, campaign structure, KPIs, and budget allocation.",
+    desc: "We define the full funnel: channel mix, audience approach, campaign architecture, KPIs, and budget logic. Strategy before spend, always.",
     icon: <Lightbulb className="w-6 h-6" />,
   },
   {
     number: "03",
     title: "Build",
-    desc: "We prepare the campaign setup, tracking, creative direction, ad copy, audience segments, and reporting framework.",
+    desc: "We prepare everything before launch — tracking, creative direction, audience segments, ad copy, and reporting frameworks. Precision in the setup pays off in performance.",
     icon: <Wrench className="w-6 h-6" />,
   },
   {
     number: "04",
     title: "Launch",
-    desc: "We activate campaigns across selected platforms with proper QA checks and tracking validation.",
+    desc: "We go live with full QA checks: tracking validation, creative review, audience verification, placement checks. No surprises on day one.",
     icon: <Rocket className="w-6 h-6" />,
   },
   {
     number: "05",
     title: "Optimize",
-    desc: "We review performance signals and improve budgets, bids, audiences, placements, creatives, and landing paths.",
+    desc: "Daily and weekly performance reviews drive real-time adjustments to budgets, bids, audiences, creatives, and placements. We never stop improving.",
     icon: <TrendingUp className="w-6 h-6" />,
   },
   {
     number: "06",
     title: "Report",
-    desc: "We share clear insights, performance summaries, learnings, and recommendations for the next phase.",
+    desc: "You get clear, honest, jargon-free insights — what worked, what didn't, what we're doing next, and where the real growth opportunity sits.",
     icon: <BarChart3 className="w-6 h-6" />,
   },
 ];
 
 export default function HowWeWork() {
+  const scrollRef = useRef(null);
+  const [isHovered, setIsHovered] = useState(false);
+
+  // Auto Scroll Logic
+  useEffect(() => {
+    const container = scrollRef.current;
+    if (!container) return;
+
+    let animationFrame;
+    let scrollAmount = 1.3;
+
+    const autoScroll = () => {
+      if (container && !isHovered) {
+        container.scrollLeft += scrollAmount;
+
+        if (container.scrollLeft >= container.scrollWidth / 2) {
+          container.scrollLeft = 0;
+        }
+      }
+      animationFrame = requestAnimationFrame(autoScroll);
+    };
+
+    animationFrame = requestAnimationFrame(autoScroll);
+
+    return () => cancelAnimationFrame(animationFrame);
+  }, [isHovered]);
+
   return (
-    <section className="relative w-full bg-white pt-16 pb-24 md:pt-20 md:pb-32 overflow-hidden">
-      {/* Background Accents */}
+    <section className="relative w-full bg-[#0a061f] py-20 md:py-28 overflow-hidden">
+      {/* Background Glows */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-10 right-10 w-80 h-80 bg-orange-500/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-10 left-10 w-80 h-80 bg-violet-500/5 rounded-full blur-3xl" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#1a0f3d] via-[#0f0824] to-[#1f1438]" />
+        <div className="absolute right-[-10%] top-[-15%] w-[900px] h-[900px] bg-purple-600/20 rounded-full blur-[140px]" />
+        <div className="absolute left-[-10%] bottom-[-20%] w-[800px] h-[800px] bg-violet-500/15 rounded-full blur-[130px]" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-12 relative z-10">
-        {/* Header - More Compact */}
-        <div className="text-center mb-12 md:mb-16">
+      <div className="max-w-[1600px] mx-auto px-6 md:px-10 lg:px-16 relative z-10">
+        {/* Header */}
+        <div className="text-center mb-16 md:mb-20">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-orange-600 uppercase tracking-[0.25em] text-sm font-bold mb-3"
+            className="text-violet-400 uppercase tracking-[4px] text-sm font-bold mb-4"
           >
-            HOW WE WORK
+            OUR PROCESS
           </motion.p>
 
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-            className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-gray-900 leading-[1.05] mb-6"
+            className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter text-white leading-tight"
           >
-            A structured media process built for{" "}
-            <span className="bg-gradient-to-r from-orange-600 via-violet-600 to-purple-600 bg-clip-text text-transparent">
-              better campaign outcomes
+            Six steps.{" "}
+            <span className="bg-gradient-to-r from-violet-400 via-purple-400 to-orange-400 bg-clip-text text-transparent">
+              Endless momentum.
             </span>
           </motion.h2>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="text-gray-600 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed"
+            className="text-gray-300 text-lg md:text-xl max-w-3xl mx-auto mt-6 leading-relaxed"
           >
-            Successful media campaigns need more than ad placements. At Admatrix, 
-            we follow a disciplined 6-step process to keep every campaign focused, 
-            measurable, and scalable.
+            Great campaigns don't happen by accident. They're built — methodically, 
+            strategically, and with relentless attention to what the data is telling us.
           </motion.p>
         </div>
 
-        {/* Process Steps Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
-          {processSteps.map((step, index) => (
+        {/* Horizontal Scrolling Container */}
+        <div
+          ref={scrollRef}
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+          className="flex gap-8 overflow-x-auto pb-8 snap-x snap-mandatory scrollbar-hide cursor-grab active:cursor-grabbing"
+        >
+          {[...processSteps, ...processSteps].map((step, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.08 }}
-              className="group relative bg-white border border-gray-100 rounded-3xl p-8 hover:border-orange-200 hover:shadow-2xl hover:-translate-y-1 transition-all duration-500"
+              className="min-w-[380px] md:min-w-[420px] bg-white/5 backdrop-blur-xl border border-white/10 hover:border-violet-500/40 rounded-3xl p-9 md:p-10 transition-all duration-500 hover:-translate-y-2 group"
+              whileHover={{ scale: 1.03 }}
             >
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 flex items-center justify-center bg-gradient-to-br from-orange-500 to-violet-600 text-white font-black text-xl rounded-2xl shadow-md">
+              <div className="flex items-center gap-5 mb-8">
+                <div className="w-14 h-14 flex items-center justify-center bg-gradient-to-br from-violet-600 to-purple-600 text-white font-black text-3xl rounded-2xl shadow-lg">
                   {step.number}
                 </div>
-                <div className="text-orange-600 group-hover:text-violet-600 transition-colors">
+                <div className="text-violet-400 group-hover:text-orange-400 transition-colors">
                   {step.icon}
                 </div>
               </div>
 
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              <h3 className="text-2xl font-bold text-white mb-5">
                 {step.title}
               </h3>
 
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-gray-300 text-[17px] leading-relaxed">
                 {step.desc}
               </p>
 
-              <div className="h-0.5 w-12 bg-gradient-to-r from-orange-400 to-violet-400 mt-8 scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
+              <div className="mt-8 h-0.5 w-16 bg-gradient-to-r from-violet-400 to-purple-400 scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
             </motion.div>
           ))}
         </div>
 
-        {/* CTA */}
+        {/* Bottom CTA */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mt-16"
+          className="text-center mt-12"
         >
           <a
             href="/contact"
-            className="inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-orange-500 to-violet-600 text-white font-bold text-lg rounded-full shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all"
+            className="group inline-flex items-center gap-4 px-12 py-6 bg-gradient-to-r from-violet-600 to-purple-600 text-white font-bold text-lg rounded-full shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all"
           >
-            Start Your Campaign
-            <ArrowRight className="w-5 h-5" />
+            Start Your Project Now
+            <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition" />
           </a>
         </motion.div>
       </div>
+
+      <style jsx>{`
+        .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+        }
+      `}</style>
     </section>
   );
 }

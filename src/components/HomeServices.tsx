@@ -3,191 +3,287 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Palette, Zap, Globe, Target, TrendingUp, Lightbulb, BarChart3, ArrowRight } from "lucide-react";
+import {
+  ArrowRight,
+  BarChart3,
+  Target,
+  TrendingUp,
+  Globe,
+  Layers3,
+  Lightbulb,
+} from "lucide-react";
 
-const homeServices = [
+const services = [
   {
+    number: "01",
     title: "Full-Funnel Media Strategy",
-    icon: <Target className="w-10 h-10" />,
-    oneLiner: "We build connected media plans that guide users from awareness to consideration, conversion, and retention.",
-    microText: [
-      "Funnel planning",
-      "Audience segmentation",
-      "Channel strategy",
-      "Budget allocation",
-      "Campaign roadmap",
-      "KPI planning",
+    icon: <Target className="w-7 h-7" />,
+    description:
+      "Your audience doesn't live in one place. Neither should your media. We architect complete campaign journeys — from first touch to final conversion.",
+    points: [
+      "End-to-end funnel planning",
+      "Persona-driven audience targeting",
+      "Multi-channel media allocation",
+      "KPI-focused campaign roadmap",
     ],
     link: "/services#full-funnel",
   },
   {
+    number: "02",
     title: "Performance Marketing",
-    icon: <TrendingUp className="w-10 h-10" />,
-    oneLiner: "Performance-led campaigns focused on measurable actions like leads, purchases, sign-ups, and conversions.",
-    microText: [
-      "Lead generation campaigns",
-      "CPA, CPL, CPI & ROAS focus",
-      "Conversion tracking",
-      "A/B testing & optimization",
+    icon: <TrendingUp className="w-7 h-7" />,
+    description:
+      "We run campaigns laser-focused on the actions that grow your business — leads, purchases, installs, and conversions.",
+    points: [
+      "CPA, CPL, CPI & ROAS optimization",
+      "Creative & audience A/B testing",
+      "Real-time bid optimization",
+      "Advanced attribution tracking",
     ],
     link: "/services#performance",
   },
   {
-    title: "User Acquisition",
-    icon: <Globe className="w-10 h-10" />,
-    oneLiner: "Quality user acquisition through targeted media buying, performance campaigns, and event optimization.",
-    microText: [
+    number: "03",
+    title: "User Acquisition & App Growth",
+    icon: <Globe className="w-7 h-7" />,
+    description:
+      "We build UA strategies that don't just drive installs — they acquire users who actually engage, subscribe, and pay.",
+    points: [
       "App install campaigns",
-      "CPI & CPA buying",
-      "Retargeting & re-engagement",
-      "Fraud monitoring",
+      "MMP integrations & setup",
+      "Post-install event optimization",
+      "Retargeting & fraud prevention",
     ],
-    link: "/services#user-acquisition",
+    link: "/services#ua",
   },
   {
-    title: "Programmatic & Display",
-    icon: <Zap className="w-10 h-10" />,
-    oneLiner: "Reach relevant audiences across premium inventory using programmatic buying and real-time optimization.",
-    microText: [
-      "Programmatic media buying",
-      "Display advertising",
-      "DSP campaigns",
-      "Contextual & audience targeting",
+    number: "04",
+    title: "Programmatic & Display Media",
+    icon: <Layers3 className="w-7 h-7" />,
+    description:
+      "Scale brand presence across premium inventory using programmatic buying with surgical audience targeting.",
+    points: [
+      "DSP-driven media buying",
+      "Native, display & video inventory",
+      "Contextual + behavioral targeting",
+      "Brand safety & viewability controls",
     ],
     link: "/services#programmatic",
   },
   {
+    number: "05",
     title: "Paid Social & Search",
-    icon: <Palette className="w-10 h-10" />,
-    oneLiner: "Strategic campaigns across Meta, Google, YouTube, LinkedIn, TikTok & more to drive awareness and conversions.",
-    microText: [
-      "Meta, TikTok & Snapchat Ads",
-      "Google Ads & YouTube",
-      "LinkedIn Advertising",
-      "Search & Performance Max",
+    icon: <BarChart3 className="w-7 h-7" />,
+    description:
+      "We turn social feeds and search results into performance engines across Meta, TikTok, Google, LinkedIn & more.",
+    points: [
+      "Meta, TikTok & LinkedIn Ads",
+      "Google Search & Performance Max",
+      "Platform-native creative strategy",
+      "Remarketing & demand generation",
     ],
     link: "/services#paid-social",
   },
   {
-    title: "Creative Strategy & Content",
-    icon: <Lightbulb className="w-10 h-10" />,
-    oneLiner: "Platform-ready creative concepts, messaging, and visuals that actually perform in today’s feed.",
-    microText: [
-      "Campaign messaging",
-      "Ad copywriting",
-      "Static & video creatives",
-      "Performance creative testing",
+    number: "06",
+    title: "Creative Strategy & Analytics",
+    icon: <Lightbulb className="w-7 h-7" />,
+    description:
+      "Great media needs great creative. We combine performance storytelling with analytics clarity.",
+    points: [
+      "Performance ad messaging",
+      "Video & static creative direction",
+      "Looker Studio dashboards",
+      "Campaign reporting & insights",
     ],
     link: "/services#creative",
   },
 ];
 
-export default function HomeServices() {
+export default function PremiumServices() {
   return (
-    <section className="relative w-full bg-white py-24 md:py-32 px-6 md:px-12 lg:px-16 overflow-hidden">
-      {/* Background Glows */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_center,rgba(249,115,22,0.08)_0%,transparent_60%)]" />
-        <div className="absolute bottom-0 right-0 w-2/3 h-2/3 bg-[radial-gradient(circle,rgba(139,92,246,0.08)_0%,transparent_70%)]" />
+    <section className="relative overflow-hidden bg-[#f8f5ff] py-28 md:py-36">
+
+      {/* BACKGROUND EFFECTS */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+
+        {/* Purple Glow */}
+        <motion.div
+          animate={{
+            scale: [1, 1.15, 1],
+            opacity: [0.4, 0.7, 0.4],
+          }}
+          transition={{
+            duration: 10,
+            repeat: Infinity,
+          }}
+          className="absolute top-[-10%] left-[-5%] w-[500px] h-[500px] rounded-full bg-violet-300/30 blur-[120px]"
+        />
+
+        {/* Orange Glow */}
+        <motion.div
+          animate={{
+            y: [0, 40, 0],
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+          }}
+          className="absolute bottom-[-10%] right-[-5%] w-[450px] h-[450px] rounded-full bg-orange-200/40 blur-[120px]"
+        />
+
+        {/* Grid */}
+        <div className="absolute inset-0 bg-[radial-gradient(rgba(139,92,246,0.08)_1px,transparent_1px)] [background-size:38px_38px]" />
       </div>
 
-      <div className="max-w-7xl mx-auto relative z-10">
-        {/* Header */}
-        <div className="text-center mb-16 md:mb-20">
+      <div className="relative z-10 max-w-[1500px] mx-auto px-6 md:px-10 lg:px-16">
+
+        {/* HEADER */}
+        <div className="text-center max-w-5xl mx-auto mb-24">
+
           <motion.p
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 25 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-orange-600 uppercase tracking-[0.3em] text-sm md:text-base font-bold mb-6"
+            className="text-violet-600 uppercase tracking-[0.4em] text-[12px] md:text-sm font-black mb-6"
           >
-            WHAT WE DO BEST
+            Core Services
           </motion.p>
 
           <motion.h2
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0, y: 35 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.9, delay: 0.2 }}
-            className="text-4xl md:text-5xl lg:text-7xl font-black tracking-tight leading-[1.1] text-gray-900 mb-8"
+            transition={{ duration: 0.8 }}
+            className="text-[#151515] text-5xl md:text-7xl lg:text-[82px] font-black leading-[0.95] tracking-tight mb-8"
           >
-            End-to-End Solutions for<br className="hidden md:block" /> 
-            <span className="bg-gradient-to-r from-orange-600 via-violet-600 to-purple-600 bg-clip-text text-transparent">
-              Business Growth
-            </span>
+            Six Disciplines.
+            <br />
+
+            <span className="bg-gradient-to-r from-violet-600 via-purple-600 to-orange-500 bg-clip-text text-transparent">
+              One Goal:
+            </span>{" "}
+            Measurable Growth.
           </motion.h2>
 
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 25 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-gray-600 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed"
+            transition={{ delay: 0.2 }}
+            className="text-gray-600 text-lg md:text-2xl leading-relaxed"
           >
-            From strategy to execution — we combine data intelligence with creative excellence.
+            Strategy, performance, media buying, user acquisition,
+            creative systems, and analytics — built together
+            to scale modern brands.
           </motion.p>
         </div>
 
-        {/* 6 Cards Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
-          {homeServices.map((service, i) => (
+        {/* SERVICES GRID */}
+        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
+
+          {services.map((service, index) => (
             <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 60 }}
+              key={index}
+              initial={{ opacity: 0, y: 70 }}
               whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{
+                y: -10,
+                rotateX: 2,
+                rotateY: 2,
+              }}
               viewport={{ once: true }}
-              transition={{ duration: 0.7, delay: i * 0.1 }}
-              className="group relative bg-white rounded-3xl p-8 md:p-9 border border-gray-100 hover:border-orange-200 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500"
+              transition={{
+                duration: 0.6,
+                delay: index * 0.08,
+              }}
+              className="group relative overflow-hidden rounded-[34px] border border-white/60 bg-white/80 backdrop-blur-xl p-8 md:p-9 shadow-[0_10px_40px_rgba(139,92,246,0.08)] hover:shadow-[0_25px_70px_rgba(139,92,246,0.18)] transition-all duration-500"
             >
-              {/* Icon */}
-              <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-violet-600 rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-orange-500/20 group-hover:scale-110 transition-transform">
-                <div className="text-white">{service.icon}</div>
+
+              {/* TOP GLOW LINE */}
+              <div className="absolute top-0 left-0 h-[3px] w-0 bg-gradient-to-r from-violet-500 to-orange-400 group-hover:w-full transition-all duration-700" />
+
+              {/* FLOATING ORB */}
+              <div className="absolute -top-16 -right-16 w-40 h-40 rounded-full bg-violet-200/30 blur-[70px] opacity-0 group-hover:opacity-100 transition duration-700" />
+
+              {/* NUMBER + ICON */}
+              <div className="flex items-center justify-between mb-10">
+
+                <div className="text-[12px] font-black tracking-[0.35em] text-violet-500 uppercase">
+                  {service.number}
+                </div>
+
+                <motion.div
+                  whileHover={{
+                    rotate: 8,
+                    scale: 1.08,
+                  }}
+                  className="w-16 h-16 rounded-2xl bg-gradient-to-br from-violet-500 to-orange-400 flex items-center justify-center text-white shadow-lg shadow-violet-500/20"
+                >
+                  {service.icon}
+                </motion.div>
               </div>
 
-              {/* Title */}
-              <h3 className="text-2xl md:text-3xl font-black text-gray-900 mb-4 leading-tight">
+              {/* TITLE */}
+              <h3 className="text-[#151515] text-[28px] md:text-[32px] font-black leading-[1.1] mb-5 tracking-tight">
                 {service.title}
               </h3>
 
-              {/* One Liner */}
-              <p className="text-gray-600 text-[17px] leading-relaxed mb-8">
-                {service.oneLiner}
+              {/* DESCRIPTION */}
+              <p className="text-gray-600 text-[16px] leading-[1.8] mb-8">
+                {service.description}
               </p>
 
-              {/* Micro Points */}
-              <ul className="space-y-3 text-sm text-gray-500 mb-10">
-                {service.microText.map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-3">
-                    <span className="mt-1.5 w-1.5 h-1.5 bg-gradient-to-r from-orange-500 to-violet-600 rounded-full flex-shrink-0" />
-                    {item}
-                  </li>
+              {/* POINTS */}
+              <div className="space-y-4 mb-10">
+
+                {service.points.map((point, idx) => (
+                  <motion.div
+                    key={idx}
+                    whileHover={{ x: 4 }}
+                    className="flex items-start gap-4"
+                  >
+                    <div className="mt-[9px] w-2 h-2 rounded-full bg-gradient-to-r from-violet-500 to-orange-400 flex-shrink-0" />
+
+                    <p className="text-gray-600 text-[15px] leading-relaxed">
+                      {point}
+                    </p>
+                  </motion.div>
                 ))}
-              </ul>
+              </div>
 
               {/* CTA */}
               <Link
                 href={service.link}
-                className="inline-flex items-center gap-2 font-semibold text-orange-600 hover:text-violet-600 group/link transition-colors"
+                className="inline-flex items-center gap-3 text-violet-600 hover:text-orange-500 transition-colors font-bold tracking-wide group/link"
               >
-                Learn More
+                Explore Service
+
                 <ArrowRight className="w-5 h-5 group-hover/link:translate-x-1 transition-transform" />
               </Link>
             </motion.div>
           ))}
         </div>
 
-        {/* Bottom CTA */}
+        {/* CTA BUTTON */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center mt-20"
+          className="flex justify-center mt-24"
         >
-          <Link href="/services">
-            <button className="group relative inline-flex items-center gap-3 px-12 py-6 bg-gradient-to-r from-orange-500 to-violet-600 text-white font-bold text-lg rounded-full shadow-xl shadow-orange-500/30 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
-              Explore All Services
-              <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
-            </button>
+          <Link
+            href="/services"
+            className="group relative inline-flex items-center gap-4 px-12 py-6 rounded-full overflow-hidden bg-gradient-to-r from-violet-600 to-orange-500 text-white font-black uppercase tracking-[0.2em] shadow-[0_20px_60px_rgba(139,92,246,0.25)] hover:scale-105 transition-all duration-300"
+          >
+
+            <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 skew-x-12" />
+
+            <span className="relative z-10">
+              View All Services
+            </span>
+
+            <ArrowRight className="relative z-10 w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </Link>
         </motion.div>
       </div>
