@@ -150,7 +150,7 @@ export default function TermsAndConditionsPage() {
                   please contact:
                   <br />
                   <br />
-                  hello@admatrixagency.com
+                  support@admatrix.com
                   <br />
                   Dubai, UAE
                 </p>

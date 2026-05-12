@@ -8,7 +8,7 @@ import JoinUsCTA from "@/components/about/JoinUsCTA";
 import AllServices from "@/components/services/AllServices";
 
 export const metadata = {
-  title: "Our Services | 5th Element Advertising & Tech",
+  title: "Our Services | Admatrix Advertising & Tech",
   description: "Explore our expertise in Branding, Event Activation, and Outdoor Advertising designed for high-impact growth.",
 };
 

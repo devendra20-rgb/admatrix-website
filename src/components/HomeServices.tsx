@@ -19,7 +19,7 @@ const services = [
     title: "Full-Funnel Media Strategy",
     icon: <Target className="w-7 h-7" />,
     description:
-      "Your audience doesn't live in one place. Neither should your media. We architect complete campaign journeys — from first touch to final conversion.",
+      "Your audience doesn't live in one place. Neither should your media. We architect complete campaign journeys - from first touch to final conversion.",
     points: [
       "End-to-end funnel planning",
       "Persona-driven audience targeting",
@@ -33,7 +33,7 @@ const services = [
     title: "Performance Marketing",
     icon: <TrendingUp className="w-7 h-7" />,
     description:
-      "We run campaigns laser-focused on the actions that grow your business — leads, purchases, installs, and conversions.",
+      "We run campaigns laser-focused on the actions that grow your business - leads, purchases, installs, and conversions.",
     points: [
       "CPA, CPL, CPI & ROAS optimization",
       "Creative & audience A/B testing",
@@ -47,7 +47,7 @@ const services = [
     title: "User Acquisition & App Growth",
     icon: <Globe className="w-7 h-7" />,
     description:
-      "We build UA strategies that don't just drive installs — they acquire users who actually engage, subscribe, and pay.",
+      "We build UA strategies that don't just drive installs - they acquire users who actually engage, subscribe, and pay.",
     points: [
       "App install campaigns",
       "MMP integrations & setup",
@@ -174,7 +174,7 @@ export default function PremiumServices() {
             className="text-gray-600 text-lg md:text-2xl leading-relaxed"
           >
             Strategy, performance, media buying, user acquisition,
-            creative systems, and analytics — built together
+            creative systems, and analytics - built together
             to scale modern brands.
           </motion.p>
         </div>

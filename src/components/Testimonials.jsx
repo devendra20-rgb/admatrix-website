@@ -7,13 +7,13 @@ const Testimonials = () => {
   const testimonials = [
     {
       company: "Secret Escapes",
-      quote: "Working with 5th Element has elevated our acquisition strategy significantly. Their data-driven approach and optimization capabilities have delivered strong results.",
+      quote: "Working with Admatrix has elevated our acquisition strategy significantly. Their data-driven approach and optimization capabilities have delivered strong results.",
       author: "Daniel Reeves",
       role: "Director of Digital Growth"
     },
     {
       company: "Autotrader",
-      quote: "5th Element’s platform adapts seamlessly to our pace of innovation. Their technology allows us to process large volumes of user signals efficiently.",
+      quote: "Admatrix’s platform adapts seamlessly to our pace of innovation. Their technology allows us to process large volumes of user signals efficiently.",
       author: "Chris Morgan",
       role: "Head of Mobile Marketing"
     },
@@ -133,28 +133,28 @@ export default Testimonials;
 // const Testimonials = () => {
 //   const testimonials = [
 //     {
-//       quote: "We've worked on previous successful campaigns with 5th Element and knew we could approach them again to take care of our pre-holiday message campaign. Once again, they came through with impressive results that delivered on every point. It's great to have such cooperation with a trusted provider that understands the industry and who we can collaborate with for specific media campaigns at Steve Madden.",
+//       quote: "We've worked on previous successful campaigns with Admatrix and knew we could approach them again to take care of our pre-holiday message campaign. Once again, they came through with impressive results that delivered on every point. It's great to have such cooperation with a trusted provider that understands the industry and who we can collaborate with for specific media campaigns at Steve Madden.",
 //       author: "Maayan Shlomov",
 //       role: "Digital & ecommerce Manager, Steve Madden",
 //       logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Steve_Madden_logo.svg/1200px-Steve_Madden_logo.svg.png", // or real logo URL
 //       link: "#", // replace with actual case study link
 //     },
 //     {
-//       quote: "We started using 5th Element in 2019 for our retargeting efforts, with the goal of driving our CPA as low as possible by using custom bidding strategies. As our advertising strategy became more ROI-driven, we were able to make better use of our budget thanks to the personalization and effectiveness of Deep Learning algorithms.",
+//       quote: "We started using Admatrix in 2019 for our retargeting efforts, with the goal of driving our CPA as low as possible by using custom bidding strategies. As our advertising strategy became more ROI-driven, we were able to make better use of our budget thanks to the personalization and effectiveness of Deep Learning algorithms.",
 //       author: "Jesslyn Kwong",
 //       role: "VP Digital Performance & Solutions, 99.co",
 //       logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/99.co_logo.svg/1200px-99.co_logo.svg.png", // placeholder
 //       link: "#",
 //     },
 //     {
-//       quote: "5th Element has consistently met or exceeded the goals we've set and has proved to be an important marketing partner. We've been impressed with both performance and service levels, so much so that we've expanded our collaboration beyond the U.K.",
+//       quote: "Admatrix has consistently met or exceeded the goals we've set and has proved to be an important marketing partner. We've been impressed with both performance and service levels, so much so that we've expanded our collaboration beyond the U.K.",
 //       author: "Michael Dobinson",
 //       role: "Head of Performance Marketing, Secret Escapes",
 //       logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Secret_Escapes_logo.svg/1200px-Secret_Escapes_logo.svg.png", // placeholder
 //       link: "#",
 //     },
 //     {
-//       quote: "5th Element drives at our speed. We have decades of data and generate more every day, and 5th Element has proven that their technology can handle that vast sea of information and find patterns that will convince people to take action in the app. That’s what we needed, and it’s what we got.",
+//       quote: "Admatrix drives at our speed. We have decades of data and generate more every day, and Admatrix has proven that their technology can handle that vast sea of information and find patterns that will convince people to take action in the app. That’s what we needed, and it’s what we got.",
 //       author: "Paul Davey",
 //       role: "Senior Mobile Marketing Manager, Autotrader",
 //       logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Autotrader_logo.svg/1200px-Autotrader_logo.svg.png", // placeholder
@@ -268,13 +268,13 @@ export default Testimonials;
 //   const testimonials = [
 //     {
 //       logo: "https://upload.wikimedia.org/wikipedia/commons/4/44/Secret_Escapes_Logo.svg",
-//       quote: "5th Element has consistently met or exceeded the goals we've set and has proved to be an important marketing partner. We've been impressed with both performance and service levels, so much so that we've expanded our collaboration beyond the U.K.",
+//       quote: "Admatrix has consistently met or exceeded the goals we've set and has proved to be an important marketing partner. We've been impressed with both performance and service levels, so much so that we've expanded our collaboration beyond the U.K.",
 //       author: 'Michael Dobinson',
 //       role: 'Head of Performance Marketing, Secret Escapes',
 //     },
 //     {
 //       logo: "https://upload.wikimedia.org/wikipedia/en/thumb/f/f9/Auto_Trader_Group_logo.svg/1200px-Auto_Trader_Group_logo.svg.png",
-//       quote: "5th Element drives at our speed. We generate more every day, and 5th Element technology can handle that vast sea of patterns that will convince people to buy. That's what we needed, and it's what we got.",
+//       quote: "Admatrix drives at our speed. We generate more every day, and Admatrix technology can handle that vast sea of patterns that will convince people to buy. That's what we needed, and it's what we got.",
 //       author: 'Paul Davey',
 //       role: 'Senior Mobile Marketing Manager, Autotrader',
 //     }

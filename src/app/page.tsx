@@ -12,6 +12,7 @@ import JoinUsCTA from "@/components/about/JoinUsCTA";
 import OurThoughts from "@/components/OurThoughts";
 import Solutions from "@/components/Solutions";
 import Advantages from "@/components/Advantages";
+import HomeAboutSection from "@/components/HomeAboutSection";
 
 export default function Home() {
   return (
@@ -27,8 +28,9 @@ export default function Home() {
       {/* <Testimonials /> */}
       {/* <CaseStudies /> */}
       <Advantages />
-      <HomeGalleryPreview />
-      <OurThoughts />
+      <HomeAboutSection />
+      {/* <HomeGalleryPreview /> */}
+      {/* <OurThoughts /> */}
 
       {/* <ValueProposition /> */}
 

@@ -16,17 +16,17 @@ const advantages = [
   {
     icon: <Target className="w-6 h-6" />,
     title: "Full-Funnel DNA",
-    text: "We see the entire customer journey — not just the ad click. Every campaign is designed to move people from awareness to action to loyalty.",
+    text: "We see the entire customer journey - not just the ad click. Every campaign is designed to move people from awareness to action to loyalty.",
   },
   {
     icon: <BarChart3 className="w-6 h-6" />,
     title: "Performance-First Mindset",
-    text: "Every media decision is tied directly to measurable business outcomes — leads, installs, sales, ROAS, and revenue growth.",
+    text: "Every media decision is tied directly to measurable business outcomes - leads, installs, sales, ROAS, and revenue growth.",
   },
   {
     icon: <Globe className="w-6 h-6" />,
     title: "Cross-Platform Mastery",
-    text: "Google, Meta, TikTok, LinkedIn, Programmatic DSPs — we know how every platform behaves and how to scale performance on each.",
+    text: "Google, Meta, TikTok, LinkedIn, Programmatic DSPs - we know how every platform behaves and how to scale performance on each.",
   },
   {
     icon: <Activity className="w-6 h-6" />,
@@ -106,7 +106,7 @@ export default function AdmatrixAdvantage() {
               <div className="pb-6">
                 <p className="text-white text-xl font-bold uppercase tracking-widest">Full Funnel</p>
                 <p className="text-white/60 mt-2 max-w-xs">
-                  Media strategy, creative, analytics, and optimization — connected into one scalable growth system.
+                  Media strategy, creative, analytics, and optimization - connected into one scalable growth system.
                 </p>
               </div>
             </div>

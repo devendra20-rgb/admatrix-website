@@ -18,7 +18,7 @@ const servicesData = [
   {
     id: "media-strategy",
     title: "Media Strategy & Planning",
-    desc: "A media plan isn't a spreadsheet of placements. It's a blueprint for growth. We build channel strategies that match your audience, funnel, competitive landscape, and business goals — before a single rupee is spent.",
+    desc: "A media plan isn't a spreadsheet of placements. It's a blueprint for growth. We build channel strategies that match your audience, funnel, competitive landscape, and business goals - before a single rupee is spent.",
     deliverables: [
       "Media Planning & Platform Selection",
       "Funnel Strategy & Customer Journey Mapping",
@@ -52,7 +52,7 @@ const servicesData = [
   {
     id: "user-acquisition",
     title: "User Acquisition & App Growth",
-    desc: "App installs alone don't build a business. We acquire users who actually matter — people who engage, convert, and stick around.",
+    desc: "App installs alone don't build a business. We acquire users who actually matter - people who engage, convert, and stick around.",
     deliverables: [
       "App Install Campaigns",
       "Post-Install Event Optimization",
@@ -69,7 +69,7 @@ const servicesData = [
   {
     id: "programmatic",
     title: "Programmatic Media Buying",
-    desc: "Reach your audience wherever they are on the open web — with the targeting precision of a sniper and the scale of a broadcast.",
+    desc: "Reach your audience wherever they are on the open web - with the targeting precision of a sniper and the scale of a broadcast.",
     deliverables: [
       "DSP Campaigns",
       "Display, Native & Video Advertising",
@@ -86,7 +86,7 @@ const servicesData = [
   {
     id: "paid-social",
     title: "Paid Social Media Advertising",
-    desc: "Social isn't just where people scroll — it's where decisions are made. We build social campaigns that stop the thumb and start the funnel.",
+    desc: "Social isn't just where people scroll - it's where decisions are made. We build social campaigns that stop the thumb and start the funnel.",
     deliverables: [
       "Meta Ads",
       "LinkedIn Advertising",
@@ -103,7 +103,7 @@ const servicesData = [
   {
     id: "search-youtube",
     title: "Search, YouTube & Google Ads",
-    desc: "When your audience is actively searching, we make sure it's your brand they find. When they're watching or discovering — we put you in the frame.",
+    desc: "When your audience is actively searching, we make sure it's your brand they find. When they're watching or discovering - we put you in the frame.",
     deliverables: [
       "Google Search Campaigns",
       "Performance Max",
@@ -120,7 +120,7 @@ const servicesData = [
   {
     id: "creative-strategy",
     title: "Creative Strategy & Performance Creatives",
-    desc: "The best targeting in the world won't save a bad creative. We make sure your ads stop people in their tracks — and give them a reason to act.",
+    desc: "The best targeting in the world won't save a bad creative. We make sure your ads stop people in their tracks - and give them a reason to act.",
     deliverables: [
       "Creative Strategy & Messaging",
       "Ad Copywriting",
@@ -137,7 +137,7 @@ const servicesData = [
   {
     id: "analytics-reporting",
     title: "Analytics, Tracking & Reporting",
-    desc: "Data without clarity is noise. We translate campaign numbers into clear decisions — so you always know where your money's going and what it's doing.",
+    desc: "Data without clarity is noise. We translate campaign numbers into clear decisions - so you always know where your money's going and what it's doing.",
     deliverables: [
       "Tracking Setup Guidance",
       "Dashboard Reporting",

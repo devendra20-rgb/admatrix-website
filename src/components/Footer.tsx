@@ -13,7 +13,7 @@ import Link from "next/link";
 const quickLinks = [
   { name: "Home", href: "/" },
   { name: "Services", href: "/services" },
-  { name: "About Us", href: "/about" },
+  { name: "About Us", href: "/about-us" },
   { name: "Contact Us", href: "/contact" },
 ];
 
@@ -73,7 +73,7 @@ const Footer = () => {
 
             {/* TITLE */}
             <h2 className="text-[#151515] text-2xl md:text-4xl font-black leading-[1.05] tracking-tight mb-5">
-              Admatrix —
+              Admatrix -
               <br />
 
               <span className="bg-gradient-to-r from-violet-600 via-purple-600 to-orange-500 bg-clip-text text-transparent">
@@ -91,7 +91,7 @@ const Footer = () => {
               programmatic buying, creative strategy,
               and data-led campaign optimization.
               Because in digital, the best story isn't
-              the one with the biggest budget —
+              the one with the biggest budget -
               it's the one with the smartest plan.
             </p>
 
@@ -160,7 +160,7 @@ const Footer = () => {
                   whileHover={{
                     x: 4,
                   }}
-                  href="tel:+971XXXXXXXX"
+                  href="tel:+971586065130"
                   className="group flex items-start gap-4 rounded-2xl bg-white/70 backdrop-blur-xl border border-white/80 shadow-[0_10px_30px_rgba(139,92,246,0.06)] p-3.5 hover:shadow-[0_18px_45px_rgba(139,92,246,0.12)] transition-all"
                 >
 
@@ -174,7 +174,7 @@ const Footer = () => {
                     </p>
 
                     <p className="text-gray-600 text-[13px]">
-                      +971 XX XXX XXXX
+                      +971 58 606 5130
                     </p>
                   </div>
                 </motion.a>
@@ -184,7 +184,7 @@ const Footer = () => {
                   whileHover={{
                     x: 4,
                   }}
-                  href="mailto:hello@admatrixagency.com"
+                  href="mailto:support@admatrix.com"
                   className="group flex items-start gap-4 rounded-2xl bg-white/70 backdrop-blur-xl border border-white/80 shadow-[0_10px_30px_rgba(139,92,246,0.06)] p-4 hover:shadow-[0_18px_45px_rgba(139,92,246,0.12)] transition-all"
                 >
 
@@ -198,7 +198,7 @@ const Footer = () => {
                     </p>
 
                     <p className="text-gray-600 text-[13px] break-all">
-                      hello@admatrixagency.com
+                      support@admatrix.com
                     </p>
                   </div>
                 </motion.a>

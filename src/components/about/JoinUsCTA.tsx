@@ -126,7 +126,7 @@ export default function JoinUsCTA() {
                 className="text-white/60 text-lg md:text-2xl leading-relaxed max-w-3xl"
               >
                 Whether you're launching, scaling, generating leads,
-                acquiring users, or improving ROAS —
+                acquiring users, or improving ROAS -
                 Admatrix builds performance systems designed around measurable growth.
               </motion.p>
             </div>

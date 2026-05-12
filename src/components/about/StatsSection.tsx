@@ -9,7 +9,7 @@ export default function StatsSection() {
   return (
     <section className="py-20 px-4 bg-gradient-to-b from-black to-purple-950/30">
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-4xl font-bold mb-16">5th Element in Numbers</h2>
+        <h2 className="text-4xl font-bold mb-16">Admatrix in Numbers</h2>
         
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {stats.map((stat, i) => (

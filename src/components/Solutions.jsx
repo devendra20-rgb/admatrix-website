@@ -18,7 +18,7 @@ import {
 const solutions = [
   {
     title: "Brand Awareness",
-    desc: "Break through the noise with high-impact reach campaigns across paid social, video, YouTube, display, and programmatic — built to make your brand impossible to ignore.",
+    desc: "Break through the noise with high-impact reach campaigns across paid social, video, YouTube, display, and programmatic - built to make your brand impossible to ignore.",
     icon: <Users className="w-7 h-7" />,
   },
   {
@@ -28,17 +28,17 @@ const solutions = [
   },
   {
     title: "App Installs & Growth",
-    desc: "Grow your user base with performance-led UA campaigns across paid social, programmatic, and mobile networks — optimized for quality, not just volume.",
+    desc: "Grow your user base with performance-led UA campaigns across paid social, programmatic, and mobile networks - optimized for quality, not just volume.",
     icon: <Download className="w-7 h-7" />,
   },
   {
     title: "Sales & Conversions",
-    desc: "Drive measurable commercial outcomes through search, shopping, retargeting, and performance campaigns focused on ROAS, CPA, and revenue — not just traffic.",
+    desc: "Drive measurable commercial outcomes through search, shopping, retargeting, and performance campaigns focused on ROAS, CPA, and revenue - not just traffic.",
     icon: <ShoppingCart className="w-7 h-7" />,
   },
   {
     title: "B2B Growth",
-    desc: "Reach the decision-makers who matter through LinkedIn, Google Search, and content-led demand generation funnels — built for pipeline, not just impressions.",
+    desc: "Reach the decision-makers who matter through LinkedIn, Google Search, and content-led demand generation funnels - built for pipeline, not just impressions.",
     icon: <Building2 className="w-7 h-7" />,
   },
   {
@@ -48,7 +48,7 @@ const solutions = [
   },
   {
     title: "Creative Testing",
-    desc: "Systematically discover what messaging, format, and visual approach makes your audience act — through structured creative testing frameworks built for learning at scale.",
+    desc: "Systematically discover what messaging, format, and visual approach makes your audience act - through structured creative testing frameworks built for learning at scale.",
     icon: <TestTube className="w-7 h-7" />,
   },
   {
@@ -134,7 +134,7 @@ export default function Solutions() {
             className="text-gray-600 text-lg md:text-2xl leading-relaxed max-w-4xl mx-auto"
           >
             Whether you want to build awareness, acquire users,
-            generate leads, drive sales, or improve campaign performance —
+            generate leads, drive sales, or improve campaign performance -
             Admatrix builds the right media approach around your objective.
           </motion.p>
         </div>

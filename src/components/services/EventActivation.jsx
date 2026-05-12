@@ -35,7 +35,7 @@ export default function EventActivation() {
           </motion.h2>
 
           <p className="text-lg md:text-xl text-gray-600 leading-relaxed mb-10">
-            Real connection is hard to buy. Our activation team creates experiences that drive footfall, engagement, and brand recall—with clean execution and strong on-ground control.
+            Real connection is hard to buy. Our activation team creates experiences that drive footfall, engagement, and brand recall-with clean execution and strong on-ground control.
           </p>
 
           <div className="mb-10">

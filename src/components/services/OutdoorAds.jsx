@@ -36,7 +36,7 @@ export default function OutdoorAds() {
           </motion.h2>
 
           <p className="text-lg md:text-xl text-gray-600 leading-relaxed mb-10">
-            Outdoor works when it’s planned right—location, visibility, and frequency. We dominate high-impact zones with smart OOH planning and premium inventory.
+            Outdoor works when it’s planned right-location, visibility, and frequency. We dominate high-impact zones with smart OOH planning and premium inventory.
           </p>
 
           <div className="mb-10">

@@ -5,7 +5,7 @@ import TeamValues from "@/components/about/TeamValues";
 import JoinUsCTA from "@/components/about/JoinUsCTA";
 
 export const metadata = {
-  title: "About 5th Element | Innovative Tech Solutions",
+  title: "About Admatrix | Innovative Tech Solutions",
   description: "Discover our mission, values, journey, and what drives us to empower businesses with next-gen technology.",
 };
 

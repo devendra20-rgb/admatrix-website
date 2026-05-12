@@ -148,7 +148,7 @@ export default function PrivacyPolicyPage() {
                   you can contact us at:
                   <br />
                   <br />
-                  hello@admatrixagency.com
+                  support@admatrix.com
                   <br />
                   Dubai, UAE
                 </p>

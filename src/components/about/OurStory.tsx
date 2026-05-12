@@ -97,7 +97,7 @@ export default function AboutContent() {
 
               <p className="text-gray-600 text-lg md:text-2xl leading-relaxed max-w-2xl">
                 Admatrix was built on one belief:
-                digital media should not just buy clicks —
+                digital media should not just buy clicks -
                 it should build scalable business growth.
               </p>
             </motion.div>
@@ -106,7 +106,7 @@ export default function AboutContent() {
             <div className="space-y-7">
 
               {[
-                "Today, customers discover, compare, and choose brands across multiple digital touchpoints — from social feeds and search to YouTube, websites, and retargeting campaigns.",
+                "Today, customers discover, compare, and choose brands across multiple digital touchpoints - from social feeds and search to YouTube, websites, and retargeting campaigns.",
                 "That's why Admatrix combines strategy, media buying, creative systems, analytics, and optimization into one connected growth engine.",
                 "We don't see campaigns as isolated ads. We build full-funnel systems that guide people from awareness to conversion and long-term retention.",
               ].map((text, i) => (

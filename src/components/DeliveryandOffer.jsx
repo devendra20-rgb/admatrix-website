@@ -8,7 +8,7 @@ const processSteps = [
   {
     number: "01",
     title: "Understand",
-    desc: "We go deep on your business, audience, market, competitors, and current media performance. No assumptions — only insight.",
+    desc: "We go deep on your business, audience, market, competitors, and current media performance. No assumptions - only insight.",
     icon: <Target className="w-6 h-6" />,
   },
   {
@@ -20,7 +20,7 @@ const processSteps = [
   {
     number: "03",
     title: "Build",
-    desc: "We prepare everything before launch — tracking, creative direction, audience segments, ad copy, and reporting frameworks. Precision in the setup pays off in performance.",
+    desc: "We prepare everything before launch - tracking, creative direction, audience segments, ad copy, and reporting frameworks. Precision in the setup pays off in performance.",
     icon: <Wrench className="w-6 h-6" />,
   },
   {
@@ -38,7 +38,7 @@ const processSteps = [
   {
     number: "06",
     title: "Report",
-    desc: "You get clear, honest, jargon-free insights — what worked, what didn't, what we're doing next, and where the real growth opportunity sits.",
+    desc: "You get clear, honest, jargon-free insights - what worked, what didn't, what we're doing next, and where the real growth opportunity sits.",
     icon: <BarChart3 className="w-6 h-6" />,
   },
 ];
@@ -107,7 +107,7 @@ export default function HowWeWork() {
             whileInView={{ opacity: 1, y: 0 }}
             className="text-gray-300 text-lg md:text-xl max-w-3xl mx-auto mt-6 leading-relaxed"
           >
-            Great campaigns don't happen by accident. They're built — methodically, 
+            Great campaigns don't happen by accident. They're built - methodically, 
             strategically, and with relentless attention to what the data is telling us.
           </motion.p>
         </div>

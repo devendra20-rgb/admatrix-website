@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Navbar from "@/components/Navbar";     // @ = src/ alias (agar configured hai to)
+import Navbar from "@/components/Navbar";     
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "5th Element",
+  title: "Admatrix | Next-Gen Performance DSP",
   description: "...",
 };
 

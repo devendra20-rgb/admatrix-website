@@ -48,7 +48,7 @@ export default function BrandingPromotion() {
           </motion.h2>
 
           <p className="text-lg md:text-xl text-gray-600 leading-relaxed mb-10">
-            Strong brands don’t just look premium—they communicate clearly, build trust fast, and convert better. We combine brand strategy + content + performance marketing to help you grow visibility and revenue.
+            Strong brands don’t just look premium-they communicate clearly, build trust fast, and convert better. We combine brand strategy + content + performance marketing to help you grow visibility and revenue.
           </p>
 
           <div className="mb-10">
