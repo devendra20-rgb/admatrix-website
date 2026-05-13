@@ -4,8 +4,13 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Admatrix | Next-Gen Performance DSP",
+  title: "Admatrix Digital | Next-Gen Performance DSP",
   description: "...",
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({

@@ -2,7 +2,7 @@
 import GalleryHero from "@/components/gallery/GalleryHero";
 import FilterableMasonry from "@/components/gallery/FilterableMasonry";
 import JustifiedGallery from "@/components/gallery/JustifiedGallery";
-import ServiceCTA from "@/components/services/ServiceCTA";
+// import ServiceCTA from "@/components/services/ServiceCTA";
 import JoinUsCTA from "@/components/about/JoinUsCTA";
 
 export const metadata = {
