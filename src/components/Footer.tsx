@@ -103,7 +103,7 @@ const Footer = () => {
                   y: -4,
                   scale: 1.05,
                 }}
-                href="#"
+                href="https://www.linkedin.com/company/admatrix-digital/"
                 className="w-12 h-12 rounded-2xl bg-white/70 backdrop-blur-xl border border-white/80 shadow-[0_10px_30px_rgba(139,92,246,0.08)] flex items-center justify-center text-violet-600 hover:text-orange-500 transition-all"
               >
                 <Linkedin size={20} />
